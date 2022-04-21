@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField]
-    private State currentState;
+    public State currentState;
 
     private void Awake()
     {

@@ -5,7 +5,9 @@ using UnityEngine;
 public class State_Time : StateEffect
 {
     public State state;
-    public float timer = 0;
+    public float timeSec = 0;
+
+    private float timer;
 
     public override void OnEnd(GameObject user, GameObject target)
     {
@@ -13,6 +15,7 @@ public class State_Time : StateEffect
 
     public override void OnStart(GameObject user, GameObject target)
     {
+        timer = timeSec;
     }
 
     public override State OnUpdate(GameObject user, GameObject target)

@@ -16,22 +16,28 @@ public class NewCharacter : MonoBehaviour
 
         GameObject states = new GameObject("States");
         states.transform.parent = transform;
+        states.transform.position = Vector3.zero;
 
         GameObject newState = new GameObject("New State");
         newState.transform.parent = states.transform;
+        newState.transform.position = Vector3.zero;
         newState.AddComponent<State>();
+        states.GetComponent<StateManager>().currentState = newState.GetComponent<State>();
 
         GameObject hitbox = new GameObject("Hitbox");
         hitbox.transform.parent = transform;
+        hitbox.transform.position = Vector3.zero;
         hitbox.tag = "Hitbox";
         hitbox.layer = gameObject.layer;
         hitbox.AddComponent<CircleCollider2D>();
 
         GameObject weaponBase = new GameObject("WeaponBase");
         weaponBase.transform.parent = transform;
+        weaponBase.transform.position = Vector3.zero;
 
         GameObject weapon = new GameObject("Weapon");
         weapon.transform.parent = weaponBase.transform;
+        weapon.transform.position = Vector3.zero;
         weapon.transform.position = new Vector3(1, 0, 0);
         weapon.AddComponent<SpriteRenderer>();
 
