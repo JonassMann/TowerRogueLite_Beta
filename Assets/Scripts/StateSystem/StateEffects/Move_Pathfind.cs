@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Move_Pathfind : StateEffect
@@ -48,7 +49,6 @@ public class Move_Pathfind : StateEffect
 
     public override State OnUpdate(GameObject user, GameObject target)
     {
-        Debug.Log(moveDir);
         if (moveDir != null) user.GetComponent<Character>().moveInput += (Vector2)moveDir * weight;
 
         return null;
@@ -56,6 +56,7 @@ public class Move_Pathfind : StateEffect
 
     private void GetPath()
     {
+        //Debug.Log(actualTarget.transform.position);
         path = pathFinder.FindPath(actualUser.transform.position, actualTarget.transform.position);
 
         if (lastPath != null) StopCoroutine(lastPath);
@@ -90,6 +91,24 @@ public class Move_Pathfind : StateEffect
 
     public void OnDrawGizmos()
     {
+        //if (grid != null)
+        //{
+        //    foreach (KeyValuePair<(float, float), Node> k in grid.grid)
+        //    {
+        //        Gizmos.color = k.Value.walkable ? Color.white : Color.red;
+        //        Gizmos.DrawCube(k.Value.worldPos, Vector3.one * .5f);
+        //    }
+        //}
+
+        //if (grid != null)
+        //{
+        //    foreach (KeyValuePair<(float, float), Node> k in grid.grid)
+        //    {
+        //        Gizmos.color = k.Value.walkable ? Color.white : Color.red;
+        //        Handles.Label(k.Value.worldPos, k.Value.gCost.ToString());
+        //    }
+        //}
+
         if (path != null)
         {
             for (int i = targetIndex; i < path.Length; i++)
@@ -106,14 +125,5 @@ public class Move_Pathfind : StateEffect
                 }
             }
         }
-
-        //if (grid != null)
-        //{
-        //    foreach (KeyValuePair<(float, float), Node> k in grid.grid)
-        //    {
-        //        Gizmos.color = k.Value.walkable ? Color.white : Color.red;
-        //        Gizmos.DrawCube(k.Value.worldPos, Vector3.one);
-        //    }
-        //}
     }
 }

@@ -45,8 +45,8 @@ public class PathGrid
         int xTemp = (int)worldPos.x;
         int yTemp = (int)worldPos.y;
 
-        float x = xTemp + .5f;
-        float y = yTemp + .5f;
+        float x = xTemp + (worldPos.x > 0 ? .5f : -.5f);
+        float y = yTemp + (worldPos.y > 0 ? .5f : -.5f);
 
         if (!grid.ContainsKey((x, y)))
             CreateNode(x, y);

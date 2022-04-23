@@ -12,6 +12,11 @@ public class Heap<T> where T : IHeapItem<T>
         items = new List<T>();
     }
 
+    public List<T> GetAll()
+    {
+        return items;
+    }
+
     public void Add(T item)
     {
         item.HeapIndex = items.Count;

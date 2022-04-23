@@ -32,7 +32,20 @@ public class Pathfinding
                     break;
                 }
 
+                List<Node> testList = openSet.GetAll();
+                Node testNode = testList[0];
+
+                for (int i = 0; i < testList.Count; i++)
+                {
+                    if (testList[i].fCost < testNode.fCost || testList[i].fCost == testNode.fCost && testList[i].hCost < testNode.hCost)
+                    {
+                        testNode = testList[i];
+                    }
+                }
+
+
                 Node currentNode = openSet.RemoveFirst();
+                Debug.Log(testNode.fCost + " _ " + currentNode.fCost);
                 testCounter++;
                 closedSet.Add(currentNode);
 
@@ -87,8 +100,15 @@ public class Pathfinding
             currentNode = currentNode.parent;
         }
         path.Add(startNode);
-        Vector3[] waypoints = SimplifyPath(path, targetPos);
-        return waypoints;
+        //Vector3[] waypoints = SimplifyPath(path, targetPos);
+        //return waypoints;
+        List<Vector3> tempPath = new List<Vector3>();
+        for (int i = 0; i < path.Count; i++)
+        {
+            tempPath.Add(path[i].worldPos);
+        }
+        tempPath.Reverse();
+        return tempPath.ToArray();
     }
 
     Vector3[] SimplifyPath(List<Node> path, Vector3 targetPos)
