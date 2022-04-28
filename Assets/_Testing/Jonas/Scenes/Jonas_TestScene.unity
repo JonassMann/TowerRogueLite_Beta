@@ -313,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109189484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.48, y: 0.83, z: 0}
+  m_LocalPosition: {x: -5.66, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1365373367}
@@ -1036,6 +1036,7 @@ GameObject:
   - component: {fileID: 1621252123}
   - component: {fileID: 1621252124}
   - component: {fileID: 1621252125}
+  - component: {fileID: 1621252126}
   m_Layer: 0
   m_Name: State 1
   m_TagString: Untagged
@@ -1088,6 +1089,23 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1621252126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621252122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3a622fdd873fd4a9756f04c6f589eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statBlock: {fileID: 0}
+  state: {fileID: 0}
+  target: {fileID: 0}
+  close: 0
+  distance: 0
 --- !u!1 &1694650681
 GameObject:
   m_ObjectHideFlags: 0
