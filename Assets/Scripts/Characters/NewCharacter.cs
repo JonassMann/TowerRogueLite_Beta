@@ -22,7 +22,7 @@ public class NewCharacter : MonoBehaviour
         newState.transform.parent = states.transform;
         newState.transform.position = Vector3.zero;
         newState.AddComponent<State>();
-        states.GetComponent<StateManager>().currentState = newState.GetComponent<State>();
+        GetComponent<StateManager>().currentState = newState.GetComponent<State>();
 
         GameObject hitbox = new GameObject("Hitbox");
         hitbox.transform.parent = transform;
