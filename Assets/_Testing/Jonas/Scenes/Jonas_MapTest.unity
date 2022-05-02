@@ -237,12 +237,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxX: 0
   maxY: 0
-  roomCount: 20
+  roomCount: 10
   tRoomCount: 0
   roomSizeX: 1.6
   roomSizeY: 1
   roomObjects: []
-  doBranch: 1
+  doBranch: 0
   branching: 0
 --- !u!4 &885633119
 Transform:
