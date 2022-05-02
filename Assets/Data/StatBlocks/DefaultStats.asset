@@ -21,3 +21,13 @@ MonoBehaviour:
     value: 0.3
   - key: JumpCooldown
     value: 1
+  - key: ProjectileCount
+    value: 1
+  - key: ProjectileSpeed
+    value: 10
+  - key: ProjectileDuration
+    value: 10
+  - key: WeaponOffset
+    value: 1
+  - key: WeaponCooldown
+    value: 0.4
