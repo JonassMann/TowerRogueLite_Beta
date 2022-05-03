@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     [HideInInspector]
     public Vector2 lookDir;
 
-    private int activeWeapon;
+    public int activeWeapon;
 
     private bool dashing;
 
@@ -56,14 +56,18 @@ public class Character : MonoBehaviour
         if (shootCD > 0) shootCD -= Time.deltaTime;
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
 
-        if (shooting && shootCD <= 0) Shoot();
+        if (shooting && shootCD <= 0)
+        {
+            SetWeaponPos();
+            Shoot();
+        }
 
         anim.SetFloat("VelY", rb.velocity.y);
         anim.SetFloat("Speed", rb.velocity.magnitude);
         anim.SetBool("Dashing", dashing);
         spriteRenderer.flipX = rb.velocity.x < 0 ? true : false;
 
-        SetWeaponPos();
+        //SetWeaponPos();
     }
 
     private void FixedUpdate()

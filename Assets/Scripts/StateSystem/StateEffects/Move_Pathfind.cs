@@ -68,9 +68,7 @@ public class Move_Pathfind : StateEffect
     {
         if (path != null)
         {
-
             Vector3 currentWaypoint = path.Length != 0 ? path[0] : transform.position;
-
             while (true)
             {
                 if (transform.position == currentWaypoint)
@@ -84,6 +82,7 @@ public class Move_Pathfind : StateEffect
                 }
 
                 moveDir = (currentWaypoint - transform.position).normalized;
+                //Debug.Log(moveDir);
                 yield return null;
             }
         }
@@ -108,6 +107,10 @@ public class Move_Pathfind : StateEffect
         //        Handles.Label(k.Value.worldPos, k.Value.gCost.ToString());
         //    }
         //}
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, moveDir);
+
 
         if (path != null)
         {
