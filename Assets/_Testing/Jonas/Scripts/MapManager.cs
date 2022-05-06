@@ -11,7 +11,7 @@ public class MapManager : MonoBehaviour
     public float roomSizeX;
     public float roomSizeY;
 
-    public bool doBranch = false;
+    private bool doBranch = false;
 
     [Range(0, 100)]
     public int branching;
@@ -64,7 +64,7 @@ public class MapManager : MonoBehaviour
                         tempMap.Add(r);
                         roomList.Enqueue(r);
                     }
-                    else if (!doBranch || ((tempMap.Count / roomCount) < (branching / 100) && GetNeightbors(r, tempMap).Count > 2))
+                    else if (!doBranch || GetNeightbors(r, tempMap).Count > 2)
                     {
                         //Debug.Log("Adding Room");
                         tempMap.Add(r);
@@ -73,7 +73,9 @@ public class MapManager : MonoBehaviour
                 }
             }
 
-            if (GetNeightbors(activeRoom, tempMap).Count != 0 || tempMap.Count / roomCount > branching / 100)
+            doBranch = (tempMap.Count / roomCount) < (branching / 100);
+
+            if (GetNeightbors(activeRoom, tempMap).Count != 0)
                 roomList.Enqueue(activeRoom);
         }
 
@@ -83,6 +85,7 @@ public class MapManager : MonoBehaviour
             map[r] = GetBorder(r, tempMap);
         }
 
+        doBranch = false;
         Debug.Log("Map Done");
     }
 

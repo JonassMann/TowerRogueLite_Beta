@@ -240,8 +240,8 @@ MonoBehaviour:
   tRoomCount: 0
   roomSizeX: 1.6
   roomSizeY: 1
-  doBranch: 0
   branching: 0
+  drawMap: 1
 --- !u!4 &885633119
 Transform:
   m_ObjectHideFlags: 0

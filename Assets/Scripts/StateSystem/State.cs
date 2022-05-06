@@ -5,10 +5,11 @@ using UnityEngine;
 public class State : MonoBehaviour
 {
     public Target targetType;
-    private GameObject targetIfOther;
+    public GameObject targetIfOther;
 
     private GameObject user;
     private GameObject target;
+    private GameObject moveTarget;
 
     private List<StateEffect> stateEffects;
 
@@ -18,7 +19,7 @@ public class State : MonoBehaviour
 
         foreach (StateEffect effect in stateEffects)
         {
-            returnState = effect.OnUpdate(user, target);
+            returnState = effect.OnUpdate(user, target, moveTarget);
             if (returnState != null)
                 break;
         }
@@ -30,28 +31,28 @@ public class State : MonoBehaviour
     {
         stateEffects = new List<StateEffect>(GetComponents<StateEffect>());
 
-        user = transform.parent.parent.gameObject;
-        ResetTarget();
+        user = transform.root.gameObject;
+        target = targetType == Target.Player ? GameObject.FindGameObjectWithTag("Player") : targetIfOther;
+        moveTarget = target;
 
         foreach (StateEffect effect in stateEffects)
-            effect.OnStart(user, target);
+            effect.OnStart(user, target, moveTarget);
     }
 
     public void StateEnd()
     {
         foreach (StateEffect effect in stateEffects)
-            effect.OnEnd(user, target);
+            effect.OnEnd(user, target, moveTarget);
     }
 
     public void ResetTarget()
     {
-        if (targetType == Target.Player) target = GameObject.FindGameObjectWithTag("Player");
-        if (targetType == Target.Other) target = targetIfOther;
+        moveTarget = target;
     }
 
     public void SetTarget(GameObject newTarget)
     {
-        target = newTarget;
+        moveTarget = newTarget;
     }
 
     public enum Target

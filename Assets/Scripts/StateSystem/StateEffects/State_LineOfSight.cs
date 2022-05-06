@@ -15,15 +15,15 @@ public class State_LineOfSight : StateEffect
         wall |= (1 << LayerMask.NameToLayer("Wall"));
     }
 
-    public override void OnEnd(GameObject user, GameObject target)
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget)
     {
     }
 
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
     {
     }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         if (this.target != null && (Physics2D.Linecast(user.transform.position, this.target.transform.position, wall) != gain)) return state;
         if (target != null && (Physics2D.Linecast(user.transform.position, target.transform.position, wall) != gain)) return state;

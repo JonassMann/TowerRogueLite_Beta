@@ -8,32 +8,36 @@ public class Target_Wander : StateEffect
     public bool square;
     public bool grid;
     public bool free;
+    public bool returnOnChange;
     public LayerMask wallMask;
-    public float walkTime;
+    public float walkTime = 10;
 
     private Vector3 startPoint;
     private GameObject targetObject;
     private float timer;
 
-    public override void OnEnd(GameObject user, GameObject target)
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget)
     {
         GetComponent<State>().ResetTarget();
-        Destroy(targetObject);
     }
 
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
     {
         timer = walkTime;
-        startPoint = user.transform.position;
-        targetObject = new GameObject();
+
+        if(startPoint == Vector3.zero || !returnOnChange)
+            startPoint = user.transform.position;
+
+        if(targetObject == null)
+            targetObject = new GameObject();
         GetTarget(user);
         GetComponent<State>().SetTarget(targetObject);
     }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         timer -= Time.deltaTime;
-        if (timer <= 0 || Vector3.Distance(user.transform.position, target.transform.position) < .1f)
+        if (timer <= 0 || Vector3.Distance(user.transform.position, moveTarget.transform.position) < .1f)
         {
             GetTarget(user);
             timer = walkTime;

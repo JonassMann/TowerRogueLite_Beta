@@ -26,14 +26,14 @@ public class Dash_Input : StateEffect
         user.JumpStart();
     }
 
-    public override void OnEnd(GameObject user, GameObject target) { }
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget) { }
 
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
     {
         this.user = user.GetComponent<Character>();
     }
 
-    public override State OnUpdate(GameObject user, GameObject target) 
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget) 
     {
         return null;
     }

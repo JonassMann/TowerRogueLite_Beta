@@ -23,6 +23,8 @@ public class Move_Pathfind : StateEffect
     private GameObject actualTarget;
     private GameObject actualUser;
 
+    private bool active;
+
     private void Awake()
     {
         grid = new PathGrid();
@@ -33,21 +35,27 @@ public class Move_Pathfind : StateEffect
         pathFinder.OnAwake(grid);
     }
 
-    public override void OnEnd(GameObject user, GameObject target) { }
-
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget)
     {
+        active = false;
+        CancelInvoke();
+        //StopCoroutine(lastPath);
+    }
+
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
+    {
+        active = true;
         actualUser = user;
         if (this.target != null)
             actualTarget = this.target;
-        else if (target != null)
-            actualTarget = target;
+        else if (moveTarget != null)
+            actualTarget = moveTarget;
         else return;
 
         InvokeRepeating(nameof(GetPath), 0, .2f);
     }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         if (moveDir != null) user.GetComponent<Character>().moveInput += (Vector2)moveDir * weight;
 
@@ -108,11 +116,8 @@ public class Move_Pathfind : StateEffect
         //    }
         //}
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, moveDir);
 
-
-        if (path != null)
+        if (path != null && active)
         {
             for (int i = targetIndex; i < path.Length; i++)
             {
@@ -127,6 +132,9 @@ public class Move_Pathfind : StateEffect
                     Gizmos.DrawLine(path[i - 1], path[i]);
                 }
             }
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, moveDir);
         }
     }
 }

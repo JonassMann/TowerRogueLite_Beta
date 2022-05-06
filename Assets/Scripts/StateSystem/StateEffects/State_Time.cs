@@ -9,16 +9,16 @@ public class State_Time : StateEffect
 
     private float timer;
 
-    public override void OnEnd(GameObject user, GameObject target)
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget)
     {
     }
 
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
     {
         timer = timeSec;
     }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         timer -= Time.deltaTime;
 

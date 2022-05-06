@@ -13,11 +13,11 @@ public class Move_Input : StateEffect
         playerInputActions.Enable();
     }
 
-    public override void OnEnd(GameObject user, GameObject target) { }
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget) { }
 
-    public override void OnStart(GameObject user, GameObject target) { }
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget) { }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         user.GetComponent<Character>().moveInput += playerInputActions.Player.Movement.ReadValue<Vector2>() * weight;
 

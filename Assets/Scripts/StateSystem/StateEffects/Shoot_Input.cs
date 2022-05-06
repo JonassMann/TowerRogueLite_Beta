@@ -32,14 +32,14 @@ public class Shoot_Input : StateEffect
         user.shooting = obj.ReadValue<float>() == 0 ? false : true;
     }
 
-    public override void OnEnd(GameObject user, GameObject target) { }
+    public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget) { }
 
-    public override void OnStart(GameObject user, GameObject target)
+    public override void OnStart(GameObject user, GameObject target, GameObject moveTarget)
     {
         this.user = user.GetComponent<Character>();
     }
 
-    public override State OnUpdate(GameObject user, GameObject target)
+    public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         this.user.lookDir = (Vector3)mousePos - user.transform.position;
