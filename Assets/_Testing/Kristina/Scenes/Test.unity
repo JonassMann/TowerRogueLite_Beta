@@ -123,6 +123,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17023787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17023791}
+  - component: {fileID: 17023788}
+  - component: {fileID: 17023790}
+  - component: {fileID: 17023789}
+  m_Layer: 8
+  m_Name: Line of Sight
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17023788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17023787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18b52e580422594aaaad7b132752ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 1
+--- !u!114 &17023789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17023787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba93c56d47883674cb319f0ee3b11ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statBlock: {fileID: 0}
+  state: {fileID: 0}
+  target: {fileID: 0}
+  gain: 0
+--- !u!114 &17023790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17023787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e164e02f9e36ce44ebed3746141085a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statBlock: {fileID: 0}
+  weight: 0.6
+  target: {fileID: 0}
+--- !u!4 &17023791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17023787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1860277591}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &174803683
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,9 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 100
-  m_RefResolutionX: 1920
-  m_RefResolutionY: 1080
+  m_AssetsPPU: 32
+  m_RefResolutionX: 600
+  m_RefResolutionY: 380
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -374,6 +451,7 @@ MonoBehaviour:
   moveInput: {x: 0, y: 0}
   shooting: 0
   lookDir: {x: 0, y: 0}
+  activeWeapon: 0
 --- !u!114 &402588421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431981388}
   - component: {fileID: 431981387}
+  - component: {fileID: 431981390}
   - component: {fileID: 431981389}
   m_Layer: 8
   m_Name: New State
@@ -458,12 +537,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 431981386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e164e02f9e36ce44ebed3746141085a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d1f64021b039efe42968ca9cf9f90733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   statBlock: {fileID: 0}
-  weight: 3
+  weight: 0.1
+  target: {fileID: 2089342763}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &431981390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431981386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba93c56d47883674cb319f0ee3b11ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statBlock: {fileID: 0}
+  state: {fileID: 17023788}
   target: {fileID: 0}
+  gain: 1
 --- !u!1 &590503640
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +624,7 @@ GameObject:
   - component: {fileID: 617903459}
   - component: {fileID: 617903458}
   - component: {fileID: 617903457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bat_idle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,12 +767,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713d215f5d676f846a2345ab24f52e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingStats: {fileID: 0}
+  startingStats: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
   weapons: []
   items: []
   moveInput: {x: 0, y: 0}
   shooting: 0
   lookDir: {x: 0, y: 0}
+  activeWeapon: 0
 --- !u!114 &617903460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011385780}
   - component: {fileID: 1011385781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -821,7 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150615794}
   - component: {fileID: 1150615795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,6 +1003,7 @@ GameObject:
   - component: {fileID: 1167934111}
   - component: {fileID: 1167934113}
   - component: {fileID: 1167934112}
+  - component: {fileID: 1167934114}
   m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
@@ -1085,6 +1185,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1167934114
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167934110}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1310576404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1526442932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1860277591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,6 +1373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431981388}
+  - {fileID: 17023791}
   m_Father: {fileID: 617903456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
