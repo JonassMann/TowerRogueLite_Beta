@@ -5,34 +5,27 @@ using UnityEditor;
 
 public class MapManager : MonoBehaviour
 {
-    public int maxX, maxY;
     public int roomCount;
     public int tRoomCount;
 
     public float roomSizeX;
     public float roomSizeY;
 
-    public List<GameObject> roomObjects;
-
     public bool doBranch = false;
 
     [Range(0, 100)]
     public int branching;
+    public bool drawMap;
 
-    private Dictionary<(int, int), Room> map;
-
-    private void Awake()
-    {
-        roomObjects = new List<GameObject>();
-        string[] roomPaths = AssetDatabase.FindAssets("t:prefab", new string[] { "Assets/Prefabs/Rooms" });
-
-        // Read, Verify, Sort
-    }
+    private Dictionary<(int, int), Border> map;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             CreateMap();
+
+        if (Input.GetKeyDown(KeyCode.B))
+            GetComponent<MapCreator>().FillMap(map);
     }
 
     public void CreateMap()
@@ -67,27 +60,27 @@ public class MapManager : MonoBehaviour
 
                     if (!doBranch || GetNeightbors(r, tempMap).Count > 2)
                     {
-                        Debug.Log("Adding Room");
+                        //Debug.Log("Adding Room");
                         tempMap.Add(r);
                         roomList.Enqueue(r);
                     }
                     else if (!doBranch || ((tempMap.Count / roomCount) < (branching / 100) && GetNeightbors(r, tempMap).Count > 2))
                     {
-                        Debug.Log("Adding Room");
+                        //Debug.Log("Adding Room");
                         tempMap.Add(r);
                         roomList.Enqueue(r);
                     }
                 }
             }
 
-            if(GetNeightbors(activeRoom, tempMap).Count != 0 || tempMap.Count/roomCount > branching/100)
+            if (GetNeightbors(activeRoom, tempMap).Count != 0 || tempMap.Count / roomCount > branching / 100)
                 roomList.Enqueue(activeRoom);
         }
 
-        map = new Dictionary<(int, int), Room>();
+        map = new Dictionary<(int, int), Border>();
         foreach ((int, int) r in tempMap)
         {
-            map[r] = new Room();
+            map[r] = GetBorder(r, tempMap);
         }
 
         Debug.Log("Map Done");
@@ -96,6 +89,18 @@ public class MapManager : MonoBehaviour
     public void AddRoom()
     {
 
+    }
+
+    private Border GetBorder((int, int) room, List<(int, int)> tempMap)
+    {
+        Border b = Border.None;
+
+        if (tempMap.Contains((room.Item1 - 1, room.Item2))) b |= Border.Left;
+        if (tempMap.Contains((room.Item1 + 1, room.Item2))) b |= Border.Right;
+        if (tempMap.Contains((room.Item1, room.Item2 - 1))) b |= Border.Down;
+        if (tempMap.Contains((room.Item1, room.Item2 + 1))) b |= Border.Up;
+
+        return b;
     }
 
     public List<(int, int)> GetNeightbors((int, int) room, List<(int, int)> tempMap)
@@ -112,8 +117,8 @@ public class MapManager : MonoBehaviour
 
     public (int, int) GetLowest(List<(int, int)> rooms, List<(int, int)> tempMap)
     {
-        Debug.Log("Finding lowest n count");
-        Debug.Log("Room count: " + rooms.Count);
+        //Debug.Log("Finding lowest n count");
+        //Debug.Log("Room count: " + rooms.Count);
 
         (int, int) lowRoom = (0, 0);
         int currLowest = 5;
@@ -128,7 +133,7 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Lowest room count: " + lowRoom);
+        //Debug.Log("Lowest room count: " + lowRoom);
         return lowRoom;
     }
 
@@ -143,9 +148,9 @@ public class MapManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (map != null)
+        if (map != null && drawMap)
         {
-            foreach (KeyValuePair<(int, int), Room> k in map)
+            foreach (KeyValuePair<(int, int), Border> k in map)
             {
                 Gizmos.color = Color.white;
                 Gizmos.DrawCube(new Vector3(k.Key.Item1 * roomSizeX, k.Key.Item2 * roomSizeY, 0), new Vector3(roomSizeX, roomSizeY, 0));

@@ -31,8 +31,7 @@ public class State : MonoBehaviour
         stateEffects = new List<StateEffect>(GetComponents<StateEffect>());
 
         user = transform.parent.parent.gameObject;
-        if (targetType == Target.Player) target = GameObject.FindGameObjectWithTag("Player");
-        if (targetType == Target.Other) target = targetIfOther;
+        ResetTarget();
 
         foreach (StateEffect effect in stateEffects)
             effect.OnStart(user, target);
@@ -42,6 +41,17 @@ public class State : MonoBehaviour
     {
         foreach (StateEffect effect in stateEffects)
             effect.OnEnd(user, target);
+    }
+
+    public void ResetTarget()
+    {
+        if (targetType == Target.Player) target = GameObject.FindGameObjectWithTag("Player");
+        if (targetType == Target.Other) target = targetIfOther;
+    }
+
+    public void SetTarget(GameObject newTarget)
+    {
+        target = newTarget;
     }
 
     public enum Target

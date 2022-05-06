@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885633119}
   - component: {fileID: 885633118}
+  - component: {fileID: 885633120}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -235,13 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccb1c88d7cc9934cb3dfab1dc278bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 0
-  maxY: 0
   roomCount: 10
   tRoomCount: 0
   roomSizeX: 1.6
   roomSizeY: 1
-  roomObjects: []
   doBranch: 0
   branching: 0
 --- !u!4 &885633119
@@ -258,3 +256,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885633120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885633117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac45cb658c5b7724f8cebfd91a8494e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomSizeX: 1
+  roomSizeY: 1
