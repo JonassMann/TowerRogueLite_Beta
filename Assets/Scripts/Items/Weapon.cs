@@ -13,4 +13,6 @@ public class Weapon : ScriptableObject
     public GameObject projectile;
 
     public StatBlock statBlock;
+
+    public StatBlock statBlockHolding;
 }
