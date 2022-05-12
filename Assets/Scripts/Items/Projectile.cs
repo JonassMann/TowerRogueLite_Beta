@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")) Destroy(this.gameObject);
-        if (gameObject.layer == collision.gameObject.layer || collision.gameObject.tag != "Hittable") return;
+        if (gameObject.layer == collision.gameObject.layer || collision.gameObject.tag != "Hitbox") return;
         collision.transform.parent.gameObject.GetComponent<Character>().TakeDamage(damage);
         Destroy(gameObject);
     }

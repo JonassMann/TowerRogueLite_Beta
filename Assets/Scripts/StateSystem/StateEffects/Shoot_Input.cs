@@ -18,7 +18,13 @@ public class Shoot_Input : StateEffect
         playerInputActions.Enable();
         playerInputActions.Player.Shoot.started += Shoot_performed;
         playerInputActions.Player.Shoot.canceled += Shoot_performed;
+        playerInputActions.Player.ChangeWeapon.performed += ChangeWeapon_performed;
         cam = Camera.main;
+    }
+
+    private void ChangeWeapon_performed(InputAction.CallbackContext obj)
+    {
+        user.GetComponent<Character>().ChangeWeaponScroll(obj.ReadValue<float>() > 0 ? 1 : -1);
     }
 
     private void OnDisable()
