@@ -38,7 +38,7 @@ public class MapManager : MonoBehaviour
         tempMap.Add((0, 0));
         roomList.Enqueue(tempMap[0]);
 
-        int maxLoops = 1000;
+        int maxLoops = 10000;
 
         while (tempMap.Count < roomCount)
         {

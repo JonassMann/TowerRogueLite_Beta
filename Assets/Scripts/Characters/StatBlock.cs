@@ -25,6 +25,8 @@ public class StatBlock : ScriptableObject
 
     public void Add(StatBlock a)
     {
+        if (a == null) return;
+
         foreach (KeyValuePair<string, float> k in a.stats)
             if (!stats.ContainsKey(k.Key))
                 stats[k.Key] = k.Value;
@@ -39,11 +41,13 @@ public class StatBlock : ScriptableObject
 
     public void Remove(StatBlock a)
     {
+        if (a == null) return;
+
         foreach (KeyValuePair<string, float> k in a.stats)
             if (stats.ContainsKey(k.Key))
             {
                 if (k.Key.EndsWith("_M"))
-                    stats[k.Key] *= k.Value;
+                    stats[k.Key] /= k.Value;
                 else
                     stats[k.Key] -= k.Value;
 
@@ -52,24 +56,16 @@ public class StatBlock : ScriptableObject
             }
     }
 
-    public float GetStat(string statName, StatBlock opt = null, float flatDefault = 0, float multiDefault = 1)
+    public float GetStat(string statName)
     {
-        float stat = flatDefault;
-        float multiplier = multiDefault;
+        float stat = 0;
+        float multiplier = 1;
 
         if (stats.TryGetValue(statName, out float flat))
             stat = flat;
 
         if (stats.TryGetValue(statName + "_M", out float multi))
             multiplier = multi;
-
-        if (opt == null) return stat * multiplier;
-
-        if (opt.stats.TryGetValue(statName, out float flatOpt))
-            stat += flatOpt;
-
-        if (opt.stats.TryGetValue(statName + "_M", out float multiOpt))
-            multiplier += multiOpt;
 
         return stat * multiplier;
     }

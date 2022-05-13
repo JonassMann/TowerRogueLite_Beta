@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
   m_Name: TestWeapon
   m_EditorClassIdentifier: 
-  weaponName: 
+  itemName: 
   description: 
-  weaponSprite: {fileID: 21300000, guid: 7dbb07651d27d4b4ea9a3734cfcf1872, type: 3}
-  projectile: {fileID: 0}
+  sprite: {fileID: 0}
   statBlock: {fileID: 0}
+  projectile: {fileID: 3644315312330560758, guid: a3c9db1b85fc6fb48aff46c30f11e3af, type: 3}
+  statBlockHolding: {fileID: 0}

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a9d64f654684b4a83c4c611fbbc9ee, type: 3}
-  m_Name: DefaultStats
+  m_Name: OneMore
   m_EditorClassIdentifier: 
   statList:
-  - key: MoveSpeed
+  - key: ProjectileCount
+    value: 15
+  - key: ProjectileSpeed
+    value: 3
+  - key: ProjectileDuration
+    value: 10
+  - key: WeaponCooldown
+    value: 1
+  - key: ProjectileSpread
     value: 5
-  - key: JumpSpeed
-    value: 8
-  - key: JumpDuration
-    value: 0.3
-  - key: JumpCooldown
-    value: 1
-  - key: Damage
-    value: 1

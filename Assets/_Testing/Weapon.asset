@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
-  m_Name: TestWeapon
+  m_Name: Weapon
   m_EditorClassIdentifier: 
-  itemName: 
+  weaponName: 
   description: 
-  sprite: {fileID: 0}
+  weaponSprite: {fileID: 0}
+  projectile: {fileID: 0}
   statBlock: {fileID: 0}
-  projectile: {fileID: 3644315312330560758, guid: a3c9db1b85fc6fb48aff46c30f11e3af, type: 3}
-  statBlockHolding: {fileID: 11400000, guid: c70f8c6ce2ddf31459772d90cd1fedfa, type: 2}

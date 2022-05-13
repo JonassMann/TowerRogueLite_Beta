@@ -18,6 +18,7 @@ public class NewRoom : MonoBehaviour
         gameObject.AddComponent<Room>();
         gameObject.AddComponent<BoxCollider2D>();
         gameObject.GetComponent<BoxCollider2D>().size = roomSize;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         GameObject fog = new GameObject("Fog");
         fog.transform.parent = transform;

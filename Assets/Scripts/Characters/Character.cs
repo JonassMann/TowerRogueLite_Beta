@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     public List<Weapon> weapons;
     public List<Item> items;
 
-    private StatBlock statBlock;
+    public StatBlock statBlock;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -41,12 +41,17 @@ public class Character : MonoBehaviour
         weaponObj = transform.Find("WeaponBase").gameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        activeWeapon = -1;
         dashing = false;
         shooting = false;
 
-        health = (int)statBlock.GetStat("HealthMax");
+        if (weapons.Count > 0)
+            ChangeWeapon(0, false);
+    }
 
-        ChangeWeapon(0);
+    private void Start()
+    {
+        health = (int)statBlock.GetStat("HealthMax");
     }
 
     private void Update()
@@ -67,13 +72,19 @@ public class Character : MonoBehaviour
         anim.SetBool("Dashing", dashing);
         spriteRenderer.flipX = rb.velocity.x < 0 ? true : false;
 
-        //SetWeaponPos();
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            foreach (KeyValuePair<string, float> k in statBlock.stats)
+            {
+                Debug.Log($"{k.Key}: {k.Value}");
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         if (!dashing)
-            rb.velocity = moveInput * statBlock.GetStat("MoveSpeed", GetActiveWeaponStats());
+            rb.velocity = moveInput * statBlock.GetStat("MoveSpeed");
     }
 
     private void InitStats()
@@ -85,6 +96,9 @@ public class Character : MonoBehaviour
 
         foreach (Item item in items)
             statBlock.Add(item.statBlock);
+
+        foreach (Weapon weapon in weapons)
+            statBlock.Add(weapon.statBlock);
     }
 
     public void AddItem(Item item)
@@ -93,26 +107,24 @@ public class Character : MonoBehaviour
         statBlock.Add(item.statBlock);
     }
 
-    public void RemoveItem(Item item)
+    public Weapon AddWeapon(Weapon weapon)
     {
-        items.Remove(item);
-        statBlock.Remove(item.statBlock);
-    }
+        if (weapons.Count < 2)
+        {
+            weapons.Add(weapon);
+            statBlock.Add(weapon.statBlock);
+            if (activeWeapon < 0) ChangeWeapon(0);
+            return null;
+        }
 
-    public void AddWeapon(Weapon weapon)
-    {
-        weapons.Add(weapon);
-    }
+        Weapon returnWeapon = weapons[activeWeapon];
 
-    public void RemoveWeapon(Weapon weapon)
-    {
-        weapons.Remove(weapon);
-    }
+        statBlock.Remove(weapons[activeWeapon].statBlockHolding);
+        weapons[activeWeapon] = weapon;
 
-    private StatBlock GetActiveWeaponStats()
-    {
-        if (weapons.Count == 0 || activeWeapon >= weapons.Count) return null;
-        return weapons[activeWeapon].statBlock;
+        ChangeWeapon(activeWeapon, false);
+
+        return returnWeapon;
     }
 
     public void ChangeWeaponScroll(int dir)
@@ -123,21 +135,28 @@ public class Character : MonoBehaviour
             return;
         }
 
-        activeWeapon += dir;
-        while (activeWeapon < 0 || activeWeapon >= weapons.Count)
+        int tempActive = activeWeapon + dir;
+
+        while (tempActive < 0 || tempActive >= weapons.Count)
         {
-            if (activeWeapon >= weapons.Count)
-                activeWeapon -= weapons.Count;
-            else if (activeWeapon < 0)
-                activeWeapon += weapons.Count;
+            if (tempActive >= weapons.Count)
+                tempActive -= weapons.Count;
+            else if (tempActive < 0)
+                tempActive += weapons.Count;
         }
+
+        ChangeWeapon(tempActive);
     }
 
-    public void ChangeWeapon(int pos)
+    public void ChangeWeapon(int pos, bool removeOld = true)
     {
         if (pos < weapons.Count)
         {
+            if (activeWeapon >= 0 && removeOld)
+                statBlock.Remove(weapons[activeWeapon].statBlockHolding);
             activeWeapon = pos;
+            if (pos < 0) return;
+            statBlock.Add(weapons[activeWeapon].statBlockHolding);
         }
         else
             Debug.Log($"No weapon in slot {pos}");
@@ -146,13 +165,18 @@ public class Character : MonoBehaviour
     private void SetWeaponPos()
     {
         if (weapons.Count == 0) return;
+        if (activeWeapon < 0)
+        {
+            weaponObj.SetActive(false);
+            return;
+        }
 
         SpriteRenderer sr = weaponObj.GetComponentInChildren<SpriteRenderer>();
 
         weaponObj.transform.right = lookDir;
 
-        if (sr.sprite != weapons[activeWeapon].weaponSprite)
-            sr.sprite = weapons[activeWeapon].weaponSprite;
+        if (sr.sprite != weapons[activeWeapon].sprite)
+            sr.sprite = weapons[activeWeapon].sprite;
 
         sr.flipY = lookDir.x < 0 ? true : false;
         sr.sortingOrder = lookDir.y < 0 ? 1 : -1;
@@ -164,45 +188,61 @@ public class Character : MonoBehaviour
     {
         // TODO: Use various projectile variables
 
+        if (activeWeapon < 0) return;
+
         if (weapons.Count == 0)
         {
             Debug.Log("Pew");
-            shootCD = statBlock.GetStat("WeaponCooldown", GetActiveWeaponStats());
+            shootCD = statBlock.GetStat("WeaponCooldown");
             return;
         }
 
-        float projectileCount = statBlock.GetStat("ProjectileCount", GetActiveWeaponStats());
+        float projectileCount = statBlock.GetStat("ProjectileCount");
+        //Debug.Log(projectileCount);
         if (projectileCount < 1) projectileCount = 1;
-        float projectileSpread = statBlock.GetStat("ProjectileSpread", GetActiveWeaponStats());
+        float projectileSpread = statBlock.GetStat("ProjectileSpread");
+        //Debug.Log(projectileSpread);
+
 
         for (float i = (-projectileCount / 2) + .5f; i < projectileCount / 2; i++)
         {
-            GameObject projectile = Instantiate(weapons[activeWeapon].projectile, transform.position + (weaponObj.transform.right * statBlock.GetStat("WeaponOffset", GetActiveWeaponStats())), weaponObj.transform.rotation);
+            GameObject projectile = Instantiate(weapons[activeWeapon].projectile, transform.position + (weaponObj.transform.right * statBlock.GetStat("WeaponOffset")), weaponObj.transform.rotation);
             projectile.transform.Rotate(Vector3.forward * i * projectileSpread);
-            projectile.GetComponent<Projectile>().Init(statBlock.GetStat("ProjectileSpeed", GetActiveWeaponStats()), statBlock.GetStat("ProjectileDuration", GetActiveWeaponStats()), (int)statBlock.GetStat("Damage", GetActiveWeaponStats()));
+            projectile.GetComponent<Projectile>().Init(statBlock.GetStat("ProjectileSpeed"), statBlock.GetStat("ProjectileDuration"), (int)statBlock.GetStat("Damage"));
             projectile.layer = gameObject.layer;
         }
 
-        shootCD = statBlock.GetStat("WeaponCooldown", GetActiveWeaponStats());
+        shootCD = statBlock.GetStat("WeaponCooldown");
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
-        {
-            if (gameObject.tag == "Player")
-            {
-                if (health <= 0)
-                {
-                    Debug.Log("Player Dead");
-                }
-            }
-            else if (transform.parent.name == "Spawner")
-            {
-                Destroy(transform.parent.gameObject);
-            }
-        }
+        Debug.Log($"Damage taken: {damage}");
+
+        //health -= damage;
+        //if (health <= 0)
+        //{
+        //    if (gameObject.tag == "Player")
+        //    {
+        //        if (health <= 0)
+        //        {
+        //            Debug.Log("Player Dead");
+        //        }
+        //    }
+        //    else if (transform.parent.name == "Spawner")
+        //    {
+        //        Destroy(transform.parent.gameObject);
+        //    }
+        //    Destroy(gameObject);
+        //}
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.tag == "Player") return;
+        Debug.Log($"{gameObject.name}/{collision.gameObject.name}");
+        if (gameObject.tag == "Player" || gameObject.layer == collision.gameObject.layer || collision.gameObject.tag != "Hitbox") return;
+
     }
 
     public void JumpStart()
@@ -216,10 +256,10 @@ public class Character : MonoBehaviour
         dashing = true;
         // Jump Animation Start
         transform.Find("Hitbox").GetComponent<Collider2D>().enabled = false;
-        rb.velocity = moveInput * statBlock.GetStat("JumpSpeed", GetActiveWeaponStats());
-        yield return new WaitForSeconds(statBlock.GetStat("JumpDuration", GetActiveWeaponStats()));
+        rb.velocity = moveInput * statBlock.GetStat("JumpSpeed");
+        yield return new WaitForSeconds(statBlock.GetStat("JumpDuration"));
         dashing = false;
-        jumpCD = statBlock.GetStat("JumpCooldown", GetActiveWeaponStats());
+        jumpCD = statBlock.GetStat("JumpCooldown");
         // Jump Animation End
         transform.Find("Hitbox").GetComponent<Collider2D>().enabled = true;
     }
