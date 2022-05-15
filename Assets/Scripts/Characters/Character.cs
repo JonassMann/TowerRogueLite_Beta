@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Character : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class Character : MonoBehaviour
     private float jumpCD;
     private float shootCD;
 
+    private float iFrames = 0;
+    public delegate void DoTouch(GameObject col);
+    public event DoTouch OnTouch;
+
+
     private void Awake()
     {
         InitStats();
@@ -60,6 +66,7 @@ public class Character : MonoBehaviour
 
         if (shootCD > 0) shootCD -= Time.deltaTime;
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
+        if (iFrames > 0) iFrames -= Time.deltaTime;
 
         if (shooting && shootCD <= 0)
         {
@@ -217,32 +224,15 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (iFrames > 0) return;
         Debug.Log($"Damage taken: {damage}");
-
-        //health -= damage;
-        //if (health <= 0)
-        //{
-        //    if (gameObject.tag == "Player")
-        //    {
-        //        if (health <= 0)
-        //        {
-        //            Debug.Log("Player Dead");
-        //        }
-        //    }
-        //    else if (transform.parent.name == "Spawner")
-        //    {
-        //        Destroy(transform.parent.gameObject);
-        //    }
-        //    Destroy(gameObject);
-        //}
+        iFrames = statBlock.GetStat("IFrames");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.tag == "Player") return;
-        Debug.Log($"{gameObject.name}/{collision.gameObject.name}");
-        if (gameObject.tag == "Player" || gameObject.layer == collision.gameObject.layer || collision.gameObject.tag != "Hitbox") return;
-
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")) return;
+        OnTouch?.Invoke(collision.gameObject);
     }
 
     public void JumpStart()
@@ -255,12 +245,11 @@ public class Character : MonoBehaviour
     {
         dashing = true;
         // Jump Animation Start
-        transform.Find("Hitbox").GetComponent<Collider2D>().enabled = false;
+        iFrames = statBlock.GetStat("JumpDuration");
         rb.velocity = moveInput * statBlock.GetStat("JumpSpeed");
         yield return new WaitForSeconds(statBlock.GetStat("JumpDuration"));
         dashing = false;
         jumpCD = statBlock.GetStat("JumpCooldown");
         // Jump Animation End
-        transform.Find("Hitbox").GetComponent<Collider2D>().enabled = true;
     }
 }

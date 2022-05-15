@@ -23,3 +23,5 @@ MonoBehaviour:
     value: 1
   - key: Damage
     value: 1
+  - key: IFrames
+    value: 1

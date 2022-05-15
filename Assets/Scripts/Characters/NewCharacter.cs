@@ -24,12 +24,12 @@ public class NewCharacter : MonoBehaviour
         newState.AddComponent<State>();
         GetComponent<StateManager>().currentState = newState.GetComponent<State>();
 
-        GameObject hitbox = new GameObject("Hitbox");
-        hitbox.transform.parent = transform;
-        hitbox.transform.localPosition = Vector3.zero;
-        hitbox.tag = "Hitbox";
-        hitbox.layer = gameObject.layer;
-        hitbox.AddComponent<CircleCollider2D>();
+        //GameObject hitbox = new GameObject("Hitbox");
+        //hitbox.transform.parent = transform;
+        //hitbox.transform.localPosition = Vector3.zero;
+        //hitbox.tag = "Hitbox";
+        //hitbox.layer = gameObject.layer;
+        //hitbox.AddComponent<CircleCollider2D>();
 
         GameObject weaponBase = new GameObject("WeaponBase");
         weaponBase.transform.parent = transform;
