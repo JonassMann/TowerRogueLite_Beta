@@ -14,7 +14,7 @@ public class Move_Towards : StateEffect
     public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
         if(this.target != null) user.GetComponent<Character>().moveInput += (Vector2)(this.target.transform.position - user.transform.position).normalized * weight;
-        else if(moveTarget != null) user.GetComponent<Character>().moveInput += (Vector2)(moveTarget.transform.position - user.transform.position).normalized * weight;
+        //else if(moveTarget != null) user.GetComponent<Character>().moveInput += (Vector2)(moveTarget.transform.position - user.transform.position).normalized * weight;
 
         return null;
     }
