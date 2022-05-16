@@ -25,3 +25,5 @@ MonoBehaviour:
     value: 15
   - key: Damage
     value: 1
+  - key: WeaponOffset
+    value: 0.4

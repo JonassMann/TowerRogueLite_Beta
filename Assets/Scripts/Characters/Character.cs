@@ -68,10 +68,11 @@ public class Character : MonoBehaviour
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
         if (iFrames > 0) iFrames -= Time.deltaTime;
 
-        if (shooting && shootCD <= 0)
+        if (shooting)
         {
             SetWeaponPos();
-            Shoot();
+            if (shootCD <= 0)
+                Shoot();
         }
 
         anim.SetFloat("VelY", rb.velocity.y);
