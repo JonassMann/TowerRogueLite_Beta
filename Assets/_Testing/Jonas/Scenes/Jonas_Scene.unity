@@ -6042,40 +6042,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1935879836 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5996333169864893947, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
-  m_PrefabInstance: {fileID: 2006248509}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1935879839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935879836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f64021b039efe42968ca9cf9f90733, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0.3
-  target: {fileID: 0}
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &1935879842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935879836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d3dff7763d9044bb3372a2da830771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2006248509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6089,7 +6055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5996333170778214022, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5996333170778214029, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
       propertyPath: m_RootOrder
@@ -6097,11 +6063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5996333170778214029, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.152053
+      value: 7.24
       objectReference: {fileID: 0}
     - target: {fileID: 5996333170778214029, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3393455
+      value: 6.04
       objectReference: {fileID: 0}
     - target: {fileID: 5996333170778214029, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6136,8 +6102,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5996333169864893925, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
-    - {fileID: 5996333169864893926, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
+    - {fileID: 5996333169864893920, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 321b2ce5961a2d045a9e2c8d353418ef, type: 3}
 --- !u!1 &2045946167
 GameObject:

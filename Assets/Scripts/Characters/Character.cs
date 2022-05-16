@@ -27,8 +27,8 @@ public class Character : MonoBehaviour
 
     private bool dashing;
 
-    private int health;
-    private int mana;
+    private float health;
+    private float mana;
 
     private float jumpCD;
     private float shootCD;
@@ -57,7 +57,8 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        health = (int)statBlock.GetStat("HealthMax");
+        health = statBlock.GetStat("MaxHealth");
+        mana = statBlock.GetStat("MaxMana");
     }
 
     private void Update()
@@ -67,6 +68,9 @@ public class Character : MonoBehaviour
         if (shootCD > 0) shootCD -= Time.deltaTime;
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
         if (iFrames > 0) iFrames -= Time.deltaTime;
+        float maxMana = statBlock.GetStat("MaxMana");
+        if (mana < maxMana) mana += statBlock.GetStat("ManaRegen") * Time.deltaTime;
+        if (mana > maxMana) mana = maxMana;
 
         if (shooting)
         {
@@ -196,7 +200,10 @@ public class Character : MonoBehaviour
     {
         // TODO: Use various projectile variables
 
-        if (activeWeapon < 0) return;
+        float manaCost = statBlock.GetStat("ManaCost");
+        if (activeWeapon < 0 || mana < manaCost) return;
+
+        mana -= manaCost;
 
         if (weapons.Count == 0)
         {
@@ -227,7 +234,20 @@ public class Character : MonoBehaviour
     {
         if (iFrames > 0) return;
         Debug.Log($"Damage taken: {damage}");
+        health -= damage;
+        if(health <= 0)
+        {
+            if (tag == "Player")
+                GameOver();
+            else if (TryGetComponent(out ItemDrop drops))
+                drops.DoDrop();
+        }
         iFrames = statBlock.GetStat("IFrames");
+    }
+
+    private void GameOver()
+    {
+        Debug.Log("Player ded");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
