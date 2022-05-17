@@ -58,6 +58,9 @@ public class StatBlock : ScriptableObject
 
     public float GetStat(string statName)
     {
+        if (!stats.ContainsKey(statName))
+            Debug.Log($"Could not find stat: {statName}");
+
         float stat = 0;
         float multiplier = 1;
 

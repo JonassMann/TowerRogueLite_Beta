@@ -122,19 +122,21 @@ public class Pathfinding
 
         for (int i = 0; tempNodePos != 0; i++)
         {
-            if (i == 0 && !Physics2D.Linecast(path[tempNodePos].worldPos, targetPos, grid.unwalkableMask))
+            //if (i == 0 && !Physics2D.Linecast(path[tempNodePos].worldPos, targetPos, grid.unwalkableMask))
+            if (i == 0 && !Physics2D.CircleCast(path[tempNodePos].worldPos, .4f, targetPos - path[tempNodePos].worldPos, Vector3.Distance(targetPos, path[tempNodePos].worldPos), grid.unwalkableMask))
             {
                 waypoints.Add(targetPos);
                 break;
             }
 
-            if (!Physics2D.Linecast(path[tempNodePos].worldPos, path[i].worldPos, grid.unwalkableMask))
+            //if (!Physics2D.Linecast(path[tempNodePos].worldPos, path[i].worldPos, grid.unwalkableMask))
+            if (!Physics2D.CircleCast(path[tempNodePos].worldPos, .4f, path[i].worldPos - path[tempNodePos].worldPos, Vector3.Distance(path[i].worldPos, path[tempNodePos].worldPos), grid.unwalkableMask))
             {
                 waypoints.Add(path[i].worldPos);
                 tempNodePos = i;
                 i = -1;
                 tempCounter++;
-                if (tempCounter >= 7)
+                if (tempCounter >= 20)
                 {
                     Debug.Log("Loop machine broke");
                     break;
@@ -144,6 +146,38 @@ public class Pathfinding
 
         return waypoints.ToArray();
     }
+
+    //Vector3[] SimplifyPath(List<Node> path, Vector3 targetPos)
+    //{
+    //    List<Vector3> waypoints = new List<Vector3>();
+
+    //    int tempNodePos = path.Count - 1;
+    //    int tempCounter = 0;
+
+    //    for (int i = 0; tempNodePos != 0; i++)
+    //    {
+    //        if (i == 0 && !Physics2D.Linecast(path[tempNodePos].worldPos, targetPos, grid.unwalkableMask))
+    //        {
+    //            waypoints.Add(targetPos);
+    //            break;
+    //        }
+
+    //        if (!Physics2D.Linecast(path[tempNodePos].worldPos, path[i].worldPos, grid.unwalkableMask))
+    //        {
+    //            waypoints.Add(path[i].worldPos);
+    //            tempNodePos = i;
+    //            i = -1;
+    //            tempCounter++;
+    //            if (tempCounter >= 7)
+    //            {
+    //                Debug.Log("Loop machine broke");
+    //                break;
+    //            }
+    //        }
+    //    }
+
+    //    return waypoints.ToArray();
+    //}
 
     int GetDistance(Node nodeA, Node nodeB)
     {
