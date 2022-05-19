@@ -24,7 +24,8 @@ public class Shoot_Input : StateEffect
 
     private void ChangeWeapon_performed(InputAction.CallbackContext obj)
     {
-        user.GetComponent<Character>().ChangeWeaponScroll(obj.ReadValue<float>() > 0 ? 1 : -1);
+        //user.GetComponent<Character>().ChangeWeaponScroll(obj.ReadValue<float>() > 0 ? 1 : -1);
+        user.GetComponent<Character>().ChangeWeapon(Mathf.Clamp((int)obj.ReadValue<float>(), 0, 1));
     }
 
     private void OnDisable()

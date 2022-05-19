@@ -17,7 +17,7 @@ public class NewRoom : MonoBehaviour
         gameObject.AddComponent<RoomActive>();
         gameObject.AddComponent<Room>();
         gameObject.AddComponent<BoxCollider2D>();
-        gameObject.GetComponent<BoxCollider2D>().size = roomSize;
+        gameObject.GetComponent<BoxCollider2D>().size = new Vector2(roomSize.x - .8f, roomSize.y - .8f);
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         GameObject fog = new GameObject("Fog");
@@ -32,6 +32,10 @@ public class NewRoom : MonoBehaviour
         GameObject room = new GameObject("Room");
         room.transform.parent = transform;
         room.transform.localPosition = Vector3.zero;
+
+        GameObject doors = new GameObject("Doors");
+        doors.transform.parent = transform;
+        doors.transform.localPosition = Vector3.zero;
 
         GameObject grid = new GameObject("Grid");
         grid.transform.parent = transform;

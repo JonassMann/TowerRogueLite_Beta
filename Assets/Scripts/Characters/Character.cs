@@ -27,8 +27,8 @@ public class Character : MonoBehaviour
 
     private bool dashing;
 
-    private float health;
-    private float mana;
+    public float health;
+    public float mana;
 
     private float jumpCD;
     private float shootCD;
@@ -72,9 +72,9 @@ public class Character : MonoBehaviour
         if (mana < maxMana) mana += statBlock.GetStat("ManaRegen") * Time.deltaTime;
         if (mana > maxMana) mana = maxMana;
 
+        SetWeaponPos();
         if (shooting)
         {
-            SetWeaponPos();
             if (shootCD <= 0)
                 Shoot();
         }
@@ -176,7 +176,9 @@ public class Character : MonoBehaviour
 
     private void SetWeaponPos()
     {
-        if (weapons.Count == 0) return;
+        weaponObj.SetActive(shooting);
+
+        if (weapons.Count == 0 || !shooting) return;
         if (activeWeapon < 0)
         {
             weaponObj.SetActive(false);
@@ -192,8 +194,6 @@ public class Character : MonoBehaviour
 
         sr.flipY = lookDir.x < 0 ? true : false;
         sr.sortingOrder = lookDir.y < 0 ? 1 : -1;
-
-        weaponObj.SetActive(shooting);
     }
 
     private void Shoot()
@@ -235,7 +235,7 @@ public class Character : MonoBehaviour
         if (iFrames > 0) return;
         Debug.Log($"Damage taken: {damage}");
         health -= damage;
-        if(health <= 0)
+        if (health <= 0)
         {
             if (tag == "Player")
                 GameOver();
@@ -243,6 +243,18 @@ public class Character : MonoBehaviour
                 drops.DoDrop();
         }
         iFrames = statBlock.GetStat("IFrames");
+    }
+
+    public void Heal(float value)
+    {
+        health += value;
+        if (health > statBlock.GetStat("MaxHealth")) health = statBlock.GetStat("MaxHealth");
+    }
+
+    public void MPHeal(float value)
+    {
+        mana += value;
+        if (mana > statBlock.GetStat("MaxMana")) mana = statBlock.GetStat("MaxMana");
     }
 
     private void GameOver()
