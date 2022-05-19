@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   description: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2b33e8d411d33ea4790ab1ee43bc228e, type: 3}
   statBlock: {fileID: 0}
+  weaponSprite: {fileID: 21300000, guid: 0461483613839ac4e8d6e2f5b9f1aac8, type: 3}
   projectile: {fileID: 3644315312330560758, guid: a3c9db1b85fc6fb48aff46c30f11e3af, type: 3}
   statBlockHolding: {fileID: 11400000, guid: 5cd32fb2210aaf9468c0993441097610, type: 2}

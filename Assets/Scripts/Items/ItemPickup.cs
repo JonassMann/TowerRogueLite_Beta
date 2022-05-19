@@ -7,7 +7,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Item item;
-    public float touchCooldown;
+    private const float touchCooldown = 2f;
 
     private float cooldown = 0;
 
