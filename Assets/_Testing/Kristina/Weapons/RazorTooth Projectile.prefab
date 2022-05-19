@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7707203915015254350}
   - component: {fileID: 8372460960133043833}
   m_Layer: 0
-  m_Name: TestProjectile 1
+  m_Name: RazorTooth Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

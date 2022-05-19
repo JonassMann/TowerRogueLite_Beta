@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c74adc2456f418a4bbe324342b89a7e1, type: 3}
-  m_Name: TestItem
+  m_Name: Orange potion 1
   m_EditorClassIdentifier: 
   itemName: 
   description: 
-  sprite: {fileID: 21300000, guid: 816990e67a856534596bb41e3be19da6, type: 3}
+  sprite: {fileID: 21300000, guid: 5220e9e8bea726e4081e25246a3b7558, type: 3}
   statBlock: {fileID: 11400000, guid: 57417aa016e686847894699116d29844, type: 2}
