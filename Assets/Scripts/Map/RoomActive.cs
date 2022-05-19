@@ -14,7 +14,7 @@ public class RoomActive : MonoBehaviour
     {
         fog = transform.Find("Fog").gameObject;
         room = transform.Find("Room").gameObject;
-        room = transform.Find("Doors").gameObject;
+        doors = transform.Find("Doors").gameObject;
         fog.SetActive(true);
         room.SetActive(false);
         doors.SetActive(true);
