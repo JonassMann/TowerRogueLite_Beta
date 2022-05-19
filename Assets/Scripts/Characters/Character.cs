@@ -189,8 +189,8 @@ public class Character : MonoBehaviour
 
         weaponObj.transform.right = lookDir;
 
-        if (sr.sprite != weapons[activeWeapon].sprite)
-            sr.sprite = weapons[activeWeapon].sprite;
+        if (sr.sprite != weapons[activeWeapon].weaponSprite)
+            sr.sprite = weapons[activeWeapon].weaponSprite;
 
         sr.flipY = lookDir.x < 0 ? true : false;
         sr.sortingOrder = lookDir.y < 0 ? 1 : -1;

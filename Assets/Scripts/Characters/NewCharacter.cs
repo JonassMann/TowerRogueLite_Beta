@@ -8,6 +8,7 @@ public class NewCharacter : MonoBehaviour
     {
         gameObject.AddComponent<StateManager>();
         gameObject.AddComponent<Character>();
+        gameObject.AddComponent<ItemDrop>();
         gameObject.AddComponent<SpriteRenderer>();
         gameObject.AddComponent<Rigidbody2D>();
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;

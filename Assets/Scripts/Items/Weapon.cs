@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "ScriptableObjects/Weapon", order = 1)]
 public class Weapon : Item
 {
+    public Sprite weaponSprite;
+
     public GameObject projectile;
 
     public StatBlock statBlockHolding;
