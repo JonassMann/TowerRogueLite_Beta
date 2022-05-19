@@ -14,16 +14,11 @@ public class WeaponUI : MonoBehaviour
     public Image leftWeapon;
     public Image rightWeapon;
 
-    private int selected;
+    private int selected = -1;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
-    }
-
-    private void Start()
-    {
-        selected = player.activeWeapon;
     }
 
     private void Update()
@@ -31,10 +26,23 @@ public class WeaponUI : MonoBehaviour
         if (player.activeWeapon != selected)
         {
             selected = player.activeWeapon;
-            selectedWeapon.sprite = selectedSprites[selected - 1];
+            selectedWeapon.sprite = selectedSprites[selected + 1];
         }
 
-        leftWeapon.sprite = player.weapons.Count > 0 ? player.weapons[0].sprite : null;
-        rightWeapon.sprite = player.weapons.Count > 1 ? player.weapons[1].sprite : null;
+        if (player.weapons.Count > 0)
+        {
+            rightWeapon.gameObject.SetActive(true);
+            rightWeapon.sprite = player.weapons[0].sprite;
+        }
+        else
+            rightWeapon.gameObject.SetActive(false);
+
+        if (player.weapons.Count > 1)
+        {
+            leftWeapon.gameObject.SetActive(true);
+            leftWeapon.sprite = player.weapons[1].sprite;
+        }
+        else
+            leftWeapon.gameObject.SetActive(false);
     }
 }
