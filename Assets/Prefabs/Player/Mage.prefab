@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3073857175049706575}
   - component: {fileID: 3073857175049706574}
   m_Layer: 7
-  m_Name: Mage Player
+  m_Name: Mage
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ Animator:
   m_GameObject: {fileID: 3073857175049706577}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5ccd4c76528487448a744a67f1c3382, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7d31eea9c2e354745944302b093a8a37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

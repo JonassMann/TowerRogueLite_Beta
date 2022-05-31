@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: 7864598af115bfa42b82d37e525607c5
+guid: c7a05c46a420ebd4a85aa2dc6b4a3444
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2641036777288457577
-    second: Elemental Flies WA4-Sheet_0
+      213: -8802871890255477772
+    second: SideTorch-Sheet_0
   - first:
-      213: 2348096235108295949
-    second: Elemental Flies WA4-Sheet_1
+      213: 2034019859288372863
+    second: SideTorch-Sheet_1
   - first:
-      213: -689512197790726612
-    second: Elemental Flies WA4-Sheet_2
+      213: -6264279545510977859
+    second: SideTorch-Sheet_2
   - first:
-      213: -3794209817707286356
-    second: Elemental Flies WA4-Sheet_3
+      213: -325471728547527709
+    second: SideTorch-Sheet_3
+  - first:
+      213: 8908485879248392263
+    second: SideTorch-Sheet_4
+  - first:
+      213: 3344988722641135722
+    second: SideTorch-Sheet_5
+  - first:
+      213: 6388744703675907491
+    second: SideTorch-Sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_0
+      name: SideTorch-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +126,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d5505c4f8d6a420800000000000000
-      internalID: 2641036777288457577
+      spriteID: 4f30d0ac7aae5d580800000000000000
+      internalID: -8802871890255477772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_1
+      name: SideTorch-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7639fa094a4a3c10800000000000000
+      internalID: 2034019859288372863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideTorch-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +168,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05ef08c51d169020800000000000000
-      internalID: 2348096235108295949
+      spriteID: dbe921461fec019a0800000000000000
+      internalID: -6264279545510977859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_2
+      name: SideTorch-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e30e73ff21bb7bf0800000000000000
+      internalID: -325471728547527709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideTorch-Sheet_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26826e2f4c5e66f0800000000000000
-      internalID: -689512197790726612
+      spriteID: 7401f2f35bc41ab70800000000000000
+      internalID: 8908485879248392263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_3
+      name: SideTorch-Sheet_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +231,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0f14cf542485bc0800000000000000
-      internalID: -3794209817707286356
+      spriteID: a6866be4589cb6e20800000000000000
+      internalID: 3344988722641135722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideTorch-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adb24f757169a850800000000000000
+      internalID: 6388744703675907491
       vertices: []
       indices: 
       edges: []

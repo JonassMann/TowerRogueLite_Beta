@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 7864598af115bfa42b82d37e525607c5
+guid: 63d473aa3964bba4188b0c495ac677ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2641036777288457577
-    second: Elemental Flies WA4-Sheet_0
+      213: 208648211530368313
+    second: Floor darker-export_0
   - first:
-      213: 2348096235108295949
-    second: Elemental Flies WA4-Sheet_1
+      213: -7264729285981287518
+    second: Floor darker-export_1
   - first:
-      213: -689512197790726612
-    second: Elemental Flies WA4-Sheet_2
+      213: -2848473426959851350
+    second: Floor darker-export_2
   - first:
-      213: -3794209817707286356
-    second: Elemental Flies WA4-Sheet_3
+      213: -4148269950699094743
+    second: Floor darker-export_3
+  - first:
+      213: 7490842089607764029
+    second: Floor darker-export_4
+  - first:
+      213: 6711503899693389165
+    second: Floor darker-export_5
+  - first:
+      213: -3724574256864227193
+    second: Floor darker-export_6
+  - first:
+      213: -7541459689073752003
+    second: Floor darker-export_7
+  - first:
+      213: 5109729675841461104
+    second: Floor darker-export_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +118,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_0
+      name: Floor darker-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935c943617445e200800000000000000
+      internalID: 208648211530368313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab45bf543f7e2b90800000000000000
+      internalID: -7264729285981287518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa02be192803878d0800000000000000
+      internalID: -2848473426959851350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d372455726e66c0800000000000000
+      internalID: -4148269950699094743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d389d9b3131d4f760800000000000000
+      internalID: 7490842089607764029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d659fd9dc3d042d50800000000000000
+      internalID: 6711503899693389165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor darker-export_6
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d5505c4f8d6a420800000000000000
-      internalID: 2641036777288457577
+      spriteID: 7801b007277af4cc0800000000000000
+      internalID: -3724574256864227193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_1
+      name: Floor darker-export_7
       rect:
         serializedVersion: 2
         x: 32
@@ -138,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05ef08c51d169020800000000000000
-      internalID: 2348096235108295949
+      spriteID: d38c4d08e5a575790800000000000000
+      internalID: -7541459689073752003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_2
+      name: Floor darker-export_8
       rect:
         serializedVersion: 2
         x: 64
@@ -159,29 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26826e2f4c5e66f0800000000000000
-      internalID: -689512197790726612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca0f14cf542485bc0800000000000000
-      internalID: -3794209817707286356
+      spriteID: 07b5dc2511869e640800000000000000
+      internalID: 5109729675841461104
       vertices: []
       indices: 
       edges: []

@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 7864598af115bfa42b82d37e525607c5
+guid: 9d2c0bef072022d448327b92c314bb03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2641036777288457577
-    second: Elemental Flies WA4-Sheet_0
+      213: -87305938846326126
+    second: Torch.sheet_0
   - first:
-      213: 2348096235108295949
-    second: Elemental Flies WA4-Sheet_1
+      213: 3526674953311799585
+    second: Torch.sheet_1
   - first:
-      213: -689512197790726612
-    second: Elemental Flies WA4-Sheet_2
+      213: 7607125841777895197
+    second: Torch.sheet_2
   - first:
-      213: -3794209817707286356
-    second: Elemental Flies WA4-Sheet_3
+      213: 9145484667111013936
+    second: Torch.sheet_3
+  - first:
+      213: -2590826521297542469
+    second: Torch.sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_0
+      name: Torch.sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d5505c4f8d6a420800000000000000
-      internalID: 2641036777288457577
+      spriteID: 292684016b3d9cef0800000000000000
+      internalID: -87305938846326126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_1
+      name: Torch.sheet_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05ef08c51d169020800000000000000
-      internalID: 2348096235108295949
+      spriteID: 129ca665f2441f030800000000000000
+      internalID: 3526674953311799585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_2
+      name: Torch.sheet_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26826e2f4c5e66f0800000000000000
-      internalID: -689512197790726612
+      spriteID: d17add816a0f19960800000000000000
+      internalID: 7607125841777895197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elemental Flies WA4-Sheet_3
+      name: Torch.sheet_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +183,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0f14cf542485bc0800000000000000
-      internalID: -3794209817707286356
+      spriteID: 03efee199d94bee70800000000000000
+      internalID: 9145484667111013936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch.sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2266371098b0cd0800000000000000
+      internalID: -2590826521297542469
       vertices: []
       indices: 
       edges: []
