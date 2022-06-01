@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Room
+  - Health
+  - Mana
+  - Tarot
   layers:
   - Default
   - TransparentFX
@@ -40,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Room
+    uniqueID: 3132980119
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
