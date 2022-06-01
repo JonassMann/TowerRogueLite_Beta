@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")) Destroy(this.gameObject);
         if (gameObject.layer == collision.gameObject.layer || gameObject.tag == "Room") return;
-        if (collision.transform.root.TryGetComponent(out Character ch))
+        if (collision.transform.TryGetComponent(out Character ch))
         {
             ch.TakeDamage(damage);
             Destroy(gameObject);
