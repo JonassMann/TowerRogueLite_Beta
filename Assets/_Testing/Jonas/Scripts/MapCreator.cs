@@ -10,11 +10,15 @@ public class MapCreator : MonoBehaviour
 
     private Dictionary<Border, List<GameObject>> rooms;
 
+    private Minimap miniMap;
+
     private void Awake()
     {
         rooms = new Dictionary<Border, List<GameObject>>();
 
         Object[] roomObjects = Resources.LoadAll("Rooms", typeof(GameObject));
+
+        miniMap = GameObject.Find("Minimap").GetComponent<Minimap>();
 
         foreach (GameObject g in roomObjects)
         {

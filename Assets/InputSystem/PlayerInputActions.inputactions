@@ -14,6 +14,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Tarot",
+                    "type": "Button",
+                    "id": "f61f64ed-8b82-439a-ad8d-4cfca8016c2c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Movement",
                     "type": "Value",
                     "id": "4aa6840a-36fe-4283-bb5e-682c270f694e",
@@ -135,6 +143,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "775413ff-ed7d-4d76-85ab-df06c84eaa52",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tarot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

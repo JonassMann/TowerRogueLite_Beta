@@ -31,6 +31,7 @@ public class RoomActive : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag != "Player") return;
+        collision.GetComponent<Character>().ResetTarot();
         fog.SetActive(true);
         room.SetActive(false);
         roomCompleted = true;
