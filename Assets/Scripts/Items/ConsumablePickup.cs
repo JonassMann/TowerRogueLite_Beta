@@ -18,7 +18,7 @@ public class ConsumablePickup : MonoBehaviour
         else if (gameObject.tag == "Mana")
             collision.gameObject.GetComponent<Character>().MPHeal(value);
         else if (gameObject.tag == "Tarot")
-            collision.gameObject.GetComponent<TarotManager>().AddTarot(1);
+            collision.gameObject.GetComponent<TarotManager>().AddTarot((int)value);
 
         Destroy(gameObject);
     }

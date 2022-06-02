@@ -67,13 +67,17 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        moveInput = Vector2.zero;
-
         if (shootCD > 0) shootCD -= Time.deltaTime;
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
         if (iFrames > 0) iFrames -= Time.deltaTime;
         float maxMana = statBlock.GetStat("MaxMana");
-        if (mana < maxMana) mana += statBlock.GetStat("ManaRegen") * Time.deltaTime;
+        float manaRegen = statBlock.GetStat("ManaRegen");
+        manaRegen *= tarots.HasFlag(Tarot.TheEmpress) ? 2 : 1;
+        manaRegen *= tarots.HasFlag(Tarot.Death) ? .5f : 1;
+        manaRegen *= tarots.HasFlag(Tarot.TheStar) ? 2 : 1;
+        manaRegen *= tarots.HasFlag(Tarot.TheMoon) ? 2 : 1;
+
+        if (mana < maxMana) mana += manaRegen * Time.deltaTime;
         if (mana > maxMana) mana = maxMana;
 
         SetWeaponPos();
@@ -103,7 +107,11 @@ public class Character : MonoBehaviour
     {
         if (!dashing)
         {
-            float moveSpeed = tarots.HasFlag(Tarot.TheChariot) ? statBlock.GetStat("MoveSpeed") * 2 : statBlock.GetStat("MoveSpeed");
+            float moveSpeed = statBlock.GetStat("MoveSpeed");
+            moveSpeed *= tarots.HasFlag(Tarot.TheChariot) ? 2 : 1;
+            moveSpeed *= tarots.HasFlag(Tarot.TheHermit) ? .5f : 1;
+            moveSpeed *= tarots.HasFlag(Tarot.TheDevil) ? .5f : 1;
+
             rb.velocity = moveInput * moveSpeed;
         }
     }
@@ -227,20 +235,29 @@ public class Character : MonoBehaviour
         }
 
         float projectileCount = statBlock.GetStat("ProjectileCount");
-        //Debug.Log(projectileCount);
         if (projectileCount < 1) projectileCount = 1;
         float projectileSpread = statBlock.GetStat("ProjectileSpread");
-        //Debug.Log(projectileSpread);
+        if (projectileSpread == 0) projectileSpread = 10;
         int damageMultiplier = 1;
+        float projectileCountMulti = 1;
+        float projectileSpeedMulti = 1;
+
         damageMultiplier *= tarots.HasFlag(Tarot.TheEmperor) ? 2 : 1;
         damageMultiplier *= tarots.HasFlag(Tarot.TheHangedMan) ? 2 : 1;
+        damageMultiplier *= tarots.HasFlag(Tarot.TheTower) ? 2 : 1;
 
+        projectileSpeedMulti *= tarots.HasFlag(Tarot.TheHierophant) ? 3 : 1;
+        projectileSpeedMulti *= tarots.HasFlag(Tarot.TheDevil) ? 2 : 1;
 
+        projectileCountMulti *= tarots.HasFlag(Tarot.TheHermit) ? 2 : 1;
+        projectileCountMulti *= tarots.HasFlag(Tarot.TheTower) ? 3 : 1;
+
+        projectileCount *= projectileCountMulti;
         for (float i = (-projectileCount / 2) + .5f; i < projectileCount / 2; i++)
         {
             GameObject projectile = Instantiate(weapons[activeWeapon].projectile, transform.position + (weaponObj.transform.right * statBlock.GetStat("WeaponOffset")), weaponObj.transform.rotation);
             projectile.transform.Rotate(Vector3.forward * i * projectileSpread);
-            projectile.GetComponent<Projectile>().Init(statBlock.GetStat("ProjectileSpeed"), statBlock.GetStat("ProjectileDuration"), (int)statBlock.GetStat("Damage") * damageMultiplier);
+            projectile.GetComponent<Projectile>().Init(statBlock.GetStat("ProjectileSpeed") * projectileSpeedMulti, statBlock.GetStat("ProjectileDuration"), (int)statBlock.GetStat("Damage") * damageMultiplier);
             projectile.layer = gameObject.layer;
         }
 
@@ -253,30 +270,46 @@ public class Character : MonoBehaviour
         if (iFrames > 0 || tarots.HasFlag(Tarot.TheLovers)) return;
         Debug.Log($"Damage taken: {damage}");
         if (tarots.HasFlag(Tarot.TheHangedMan)) damage *= 2;
-        if (tarots.HasFlag(Tarot.Justice)) damage = 1;
         if (tarots.HasFlag(Tarot.Judgement)) damage *= 2;
+        if (tarots.HasFlag(Tarot.TheTower)) damage *= 2;
+        if (tarots.HasFlag(Tarot.Justice)) damage = 1;
         if (tarots.HasFlag(Tarot.TheSun)) damage = 0;
 
         health -= damage;
+
+        Debug.Log($"{gameObject.name} hp: {health}");
+
         if (health <= 0)
         {
             if (tag == "Player")
                 GameOver();
-            else if (TryGetComponent(out ItemDrop drops))
-                GameObject.Find("DropManager").GetComponent<ItemDrop>().DoDrop(transform.position, tarots.HasFlag(Tarot.TheWheelOfFortune));
+            else
+                GameObject.Find("DropManager").GetComponent<ItemDrop>().DoDrop(gameObject);
         }
         iFrames = statBlock.GetStat("IFrames");
     }
 
     public void Heal(float value)
     {
-        health += tarots.HasFlag(Tarot.Strength) ? value * 2 : value;
-        if (health > statBlock.GetStat("MaxHealth")) health = statBlock.GetStat("MaxHealth");
+        float healthAdd = value;
+        healthAdd *=  tarots.HasFlag(Tarot.Strength) ? 2 : 1;
+        healthAdd *=  tarots.HasFlag(Tarot.TheStar) ? 2 : 1;
+
+        health += healthAdd;
+
+        float maxHealth = statBlock.GetStat("MaxHealth");
+        maxHealth *= tarots.HasFlag(Tarot.Death) ? .5f : 1;
+        maxHealth *= tarots.HasFlag(Tarot.TheTower) ? .5f : 1;
+
+        if (health > maxHealth) health = maxHealth;
     }
 
     public void MPHeal(float value)
     {
-        mana += tarots.HasFlag(Tarot.TheMagician) ? value * 2 : value;
+        float manaAdd = value;
+        manaAdd *= tarots.HasFlag(Tarot.TheMagician) ? 2 : 1;
+
+        mana += manaAdd;
         if (mana > statBlock.GetStat("MaxMana")) mana = statBlock.GetStat("MaxMana");
     }
 

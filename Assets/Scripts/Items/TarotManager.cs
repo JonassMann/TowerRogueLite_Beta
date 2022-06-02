@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class TarotManager : MonoBehaviour
 {
@@ -14,12 +15,17 @@ public class TarotManager : MonoBehaviour
 
     public Dictionary<string, Sprite> tarotSprites;
     public Image tarotimage;
+    public TMP_Text tarotNum;
+
+    Tarot[] values;
 
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Enable();
         playerInputActions.Player.Tarot.performed += Tarot_performed;
+
+        values = (Tarot[])Enum.GetValues(typeof(Tarot));
     }
 
     void Start()
@@ -42,10 +48,8 @@ public class TarotManager : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            //deck.Enqueue((Tarot)Random.Range(1, 23));
+            deck.Enqueue(values[UnityEngine.Random.Range(1, values.Length)]);
         }
-        deck.Enqueue(Tarot.TheChariot);
-        deck.Enqueue(Tarot.TheHighPriestess);
         SetCurrent();
     }
 
@@ -63,6 +67,8 @@ public class TarotManager : MonoBehaviour
             Debug.Log(Enum.GetName(typeof(Tarot), current));
             tarotimage.sprite = tarotSprites[Enum.GetName(typeof(Tarot), current)];
         }
+
+        tarotNum.text = deck.Count.ToString();
     }
 
     public void UseTarot()
@@ -84,13 +90,13 @@ public class TarotManager : MonoBehaviour
                 ch.tarots |= Tarot.TheHighPriestess;
                 break;
             case Tarot.TheEmpress:
-                // TODO Doubles coin pickups
+                ch.tarots |= Tarot.TheEmpress;
                 break;
             case Tarot.TheEmperor:
                 ch.tarots |= Tarot.TheEmperor;
                 break;
             case Tarot.TheHierophant:
-                // TODO Enemies stop attacking for 5 seconds
+                ch.tarots |= Tarot.TheHierophant;
                 break;
             case Tarot.TheLovers:
                 ch.tarots |= Tarot.TheLovers;
@@ -102,7 +108,7 @@ public class TarotManager : MonoBehaviour
                 ch.tarots |= Tarot.Strength;
                 break;
             case Tarot.TheHermit:
-                // TODO Show map
+                ch.tarots |= Tarot.TheHermit;
                 break;
             case Tarot.TheWheelOfFortune:
                 ch.tarots |= Tarot.TheWheelOfFortune;
@@ -114,22 +120,24 @@ public class TarotManager : MonoBehaviour
                 ch.tarots |= Tarot.TheHangedMan;
                 break;
             case Tarot.Death:
-                // nope
+                ch.tarots |= Tarot.Death;
+                ch.Heal(0);
                 break;
             case Tarot.Temperance:
                 ch.tarots |= Tarot.Temperance;
                 break;
             case Tarot.TheDevil:
-                // nope
+                ch.tarots |= Tarot.TheDevil;
                 break;
             case Tarot.TheTower:
-                // nope
+                ch.tarots |= Tarot.TheTower;
+                ch.Heal(0);
                 break;
             case Tarot.TheStar:
-                // nope
+                ch.tarots |= Tarot.TheStar;
                 break;
             case Tarot.TheMoon:
-                // nope
+                ch.tarots |= Tarot.TheMoon;
                 break;
             case Tarot.TheSun:
                 ch.tarots |= Tarot.TheSun;

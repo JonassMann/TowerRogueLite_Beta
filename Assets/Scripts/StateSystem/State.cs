@@ -17,6 +17,8 @@ public class State : MonoBehaviour
     {
         State returnState = null;
 
+        user.GetComponent<Character>().moveInput = Vector2.zero;
+
         foreach (StateEffect effect in stateEffects)
         {
             returnState = effect.OnUpdate(user, target, moveTarget);
@@ -31,7 +33,7 @@ public class State : MonoBehaviour
     {
         stateEffects = new List<StateEffect>(GetComponents<StateEffect>());
 
-        user = transform.root.gameObject;
+        user = transform.parent.parent.gameObject;
         target = targetType == Target.Player ? GameObject.FindGameObjectWithTag("Player") : targetIfOther;
         moveTarget = target;
 
