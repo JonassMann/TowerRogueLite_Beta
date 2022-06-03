@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4329129597546115335}
   - component: {fileID: 4329129597546115332}
-  - component: {fileID: 4329129597546115329}
   - component: {fileID: 4329129597546115334}
+  - component: {fileID: 4329129597546115329}
+  - component: {fileID: 5190303855910569499}
   m_Layer: 0
   m_Name: New State
   m_TagString: Untagged
@@ -45,8 +46,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18b52e580422594aaaad7b132752ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetType: 2
+  targetType: 1
   targetIfOther: {fileID: 0}
+--- !u!114 &4329129597546115334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4329129597546115333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42dcf707146fc24da42dc4da43925b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  square: 0
+  grid: 1
+  free: 0
+  returnOnChange: 0
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 0
+  walkTime: 10
 --- !u!114 &4329129597546115329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +86,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &4329129597546115334
+--- !u!114 &5190303855910569499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,18 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4329129597546115333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42dcf707146fc24da42dc4da43925b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 98d3dff7763d9044bb3372a2da830771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
-  square: 0
-  grid: 0
-  free: 0
-  returnOnChange: 0
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 0
-  walkTime: 10
 --- !u!1 &4329129597726386557
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +273,7 @@ MonoBehaviour:
   activeWeapon: 0
   health: 0
   mana: 0
+  tarots: 0
 --- !u!114 &4329129598444430216
 MonoBehaviour:
   m_ObjectHideFlags: 0

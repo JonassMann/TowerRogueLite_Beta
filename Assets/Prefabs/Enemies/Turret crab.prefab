@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4760322866736508320}
   - component: {fileID: 4760322866736508323}
   - component: {fileID: 4760322866736508322}
+  - component: {fileID: 2606396296838668168}
   m_Layer: 0
   m_Name: Standard state (locked axis)
   m_TagString: Untagged
@@ -75,6 +76,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockX: 0
   lockY: 1
+--- !u!114 &2606396296838668168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760322866736508327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d3dff7763d9044bb3372a2da830771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4760322867583017404
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,15 +205,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingStats: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
-  weapons: []
+  weapons:
+  - {fileID: 11400000, guid: 58316025505dc6e49b6960fac4a8d84b, type: 2}
   items: []
   statBlock: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
   moveInput: {x: 0, y: 0}
   shooting: 0
   lookDir: {x: 0, y: 0}
-  activeWeapon: 0
+  activeWeapon: 1
   health: 0
   mana: 0
+  tarots: 0
 --- !u!50 &4760322867583017400
 Rigidbody2D:
   serializedVersion: 4

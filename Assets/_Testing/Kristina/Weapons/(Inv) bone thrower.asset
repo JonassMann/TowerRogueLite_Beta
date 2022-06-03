@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
+  m_Name: (Inv) bone thrower
+  m_EditorClassIdentifier: 
+  itemName: (Inv) bone thrower
+  description: 
+  sprite: {fileID: 0}
+  statBlock: {fileID: 0}
+  weaponSprite: {fileID: 0}
+  projectile: {fileID: 3644315312330560758, guid: bcaa8e846f1668f4fa3ce0f1b7d34118, type: 3}
+  statBlockHolding: {fileID: 11400000, guid: c70f8c6ce2ddf31459772d90cd1fedfa, type: 2}
