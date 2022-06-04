@@ -19,14 +19,20 @@ public class MapManager : MonoBehaviour
 
     private Dictionary<(int, int), Border> map;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            CreateMap();
-
-        if (Input.GetKeyDown(KeyCode.B))
-            GetComponent<MapCreator>().FillMap(map);
+        CreateMap();
+        GetComponent<MapCreator>().FillMap(map);
     }
+
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //        CreateMap();
+
+    //    if (Input.GetKeyDown(KeyCode.B))
+    //        GetComponent<MapCreator>().FillMap(map);
+    //}
 
     public void CreateMap()
     {
@@ -149,17 +155,17 @@ public class MapManager : MonoBehaviour
     //    return tempRooms;
     //}
 
-    private void OnDrawGizmos()
-    {
-        if (map != null && drawMap)
-        {
-            foreach (KeyValuePair<(int, int), Border> k in map)
-            {
-                Gizmos.color = Color.white;
-                Gizmos.DrawCube(new Vector3(k.Key.Item1 * roomSizeX, k.Key.Item2 * roomSizeY, 0), new Vector3(roomSizeX, roomSizeY, 0));
-            }
-        }
+    //private void OnDrawGizmos()
+    //{
+    //    if (map != null && drawMap)
+    //    {
+    //        foreach (KeyValuePair<(int, int), Border> k in map)
+    //        {
+    //            Gizmos.color = Color.white;
+    //            Gizmos.DrawCube(new Vector3(k.Key.Item1 * roomSizeX, k.Key.Item2 * roomSizeY, 0), new Vector3(roomSizeX, roomSizeY, 0));
+    //        }
+    //    }
 
 
-    }
+    //}
 }

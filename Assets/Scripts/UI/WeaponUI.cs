@@ -16,7 +16,7 @@ public class WeaponUI : MonoBehaviour
 
     private int selected = -1;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
     }

@@ -10,7 +10,7 @@ public class HealthAndMana : MonoBehaviour
     public Slider hpBar;
     public Slider mpBar;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
     }

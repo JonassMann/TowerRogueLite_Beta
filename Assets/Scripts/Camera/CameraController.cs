@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
 
     private Character player;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
     }

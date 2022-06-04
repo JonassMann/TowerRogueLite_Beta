@@ -18,7 +18,7 @@ public class MapCreator : MonoBehaviour
 
         Object[] roomObjects = Resources.LoadAll("Rooms", typeof(GameObject));
 
-        miniMap = GameObject.Find("Minimap").GetComponent<Minimap>();
+        //miniMap = GameObject.Find("Minimap").GetComponent<Minimap>();
 
         foreach (GameObject g in roomObjects)
         {
