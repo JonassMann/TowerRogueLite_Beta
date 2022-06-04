@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713d215f5d676f846a2345ab24f52e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingStats: {fileID: 0}
+  startingStats: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
   weapons: []
   items: []
   statBlock: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}

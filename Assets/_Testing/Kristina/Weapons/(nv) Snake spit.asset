@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
   m_Name: (nv) Snake spit
   m_EditorClassIdentifier: 
-  itemName: Inv. bomb thrower
+  itemName: Inv. spit
   description: 
   sprite: {fileID: 0}
   statBlock: {fileID: 0}
