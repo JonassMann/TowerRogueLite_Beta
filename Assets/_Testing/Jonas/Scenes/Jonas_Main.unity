@@ -759,8 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac45cb658c5b7724f8cebfd91a8494e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomSizeX: 1
-  roomSizeY: 1
+  roomSizeX: 20
+  roomSizeY: 20
 --- !u!114 &2006620284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,8 +775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomCount: 10
   tRoomCount: 0
-  roomSizeX: 1.6
-  roomSizeY: 1
   branching: 0
   drawMap: 1
 --- !u!4 &2006620285

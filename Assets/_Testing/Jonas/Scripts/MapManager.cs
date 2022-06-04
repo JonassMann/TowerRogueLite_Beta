@@ -8,8 +8,8 @@ public class MapManager : MonoBehaviour
     public int roomCount;
     public int tRoomCount;
 
-    public float roomSizeX;
-    public float roomSizeY;
+    //public float roomSizeX;
+    //public float roomSizeY;
 
     private bool doBranch = false;
 
