@@ -10,7 +10,7 @@ public class LoadRun : MonoBehaviour
 
    private void OnTriggerEnter2D (Collider2D other)
     {
-        Invoke("StartingRoom", delayedtime);
+        Invoke(nameof(GameScene), delayedtime);
     }
 
     public void GameScene()
