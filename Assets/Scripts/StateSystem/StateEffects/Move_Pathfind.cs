@@ -37,6 +37,7 @@ public class Move_Pathfind : StateEffect
 
     public override void OnEnd(GameObject user, GameObject target, GameObject moveTarget)
     {
+        Debug.Log(gameObject.name);
         active = false;
         CancelInvoke();
         //StopCoroutine(lastPath);
@@ -64,6 +65,7 @@ public class Move_Pathfind : StateEffect
 
     private void GetPath()
     {
+        if (active == false) CancelInvoke();
         //Debug.Log(actualTarget.transform.position);
         path = pathFinder.FindPath(actualUser.transform.position, actualTarget.transform.position);
 

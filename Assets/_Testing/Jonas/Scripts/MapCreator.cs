@@ -23,7 +23,6 @@ public class MapCreator : MonoBehaviour
         foreach (GameObject g in roomObjects)
         {
             Border b = g.GetComponent<Room>().border;
-            Debug.Log(b);
 
             if ((int)b == -1)
             {

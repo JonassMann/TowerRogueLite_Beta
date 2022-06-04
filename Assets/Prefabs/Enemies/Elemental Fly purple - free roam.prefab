@@ -211,7 +211,7 @@ MonoBehaviour:
   returnOnChange: 0
   wallMask:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 64
   walkTime: 2
 --- !u!114 &6534088917882909292
 MonoBehaviour:

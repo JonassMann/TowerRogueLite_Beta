@@ -317,10 +317,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2899842635890806416}
   - component: {fileID: 2899842635890806417}
-  - component: {fileID: 2899842635890806418}
   - component: {fileID: 2899842635890806419}
+  - component: {fileID: 2899842635890806418}
   - component: {fileID: 7648254473849274587}
-  - component: {fileID: 2603783437266449551}
   m_Layer: 0
   m_Name: New State
   m_TagString: Untagged
@@ -356,23 +355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetType: 2
   targetIfOther: {fileID: 0}
---- !u!114 &2899842635890806418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2899842635890806422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f64021b039efe42968ca9cf9f90733, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0.4
-  target: {fileID: 0}
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &2899842635890806419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +376,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   walkTime: 10
---- !u!114 &7648254473849274587
+--- !u!114 &2899842635890806418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,10 +385,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2899842635890806422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d3dff7763d9044bb3372a2da830771, type: 3}
+  m_Script: {fileID: 11500000, guid: d1f64021b039efe42968ca9cf9f90733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2603783437266449551
+  weight: 0.4
+  target: {fileID: 0}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &7648254473849274587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

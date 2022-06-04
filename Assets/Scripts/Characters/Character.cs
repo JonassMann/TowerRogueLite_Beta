@@ -186,6 +186,7 @@ public class Character : MonoBehaviour
     {
         if (pos < weapons.Count)
         {
+            Debug.Log(gameObject.name);
             if (activeWeapon >= 0 && removeOld)
                 statBlock.Remove(weapons[activeWeapon].statBlockHolding);
             activeWeapon = pos;

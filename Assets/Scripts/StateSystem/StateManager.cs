@@ -6,8 +6,9 @@ public class StateManager : MonoBehaviour
 {
     public State currentState;
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log(gameObject.name);
         currentState.StateStart();
     }
 
