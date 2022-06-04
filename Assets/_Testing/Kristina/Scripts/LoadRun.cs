@@ -10,11 +10,11 @@ public class LoadRun : MonoBehaviour
 
    private void OnTriggerEnter2D (Collider2D other)
     {
-        Invoke("GameScene", delayedtime);
+        Invoke("StartingRoom", delayedtime);
     }
 
     public void GameScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("StartingRoom");
     }
 }

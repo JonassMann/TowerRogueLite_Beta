@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 7073942622294511360}
   m_Layer: 8
   m_Name: greendevil_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 7073942622413289507}
   - component: {fileID: 7073942622413289504}
   - component: {fileID: 3662361702564767070}
+  - component: {fileID: 4523598744051432909}
   m_Layer: 8
   m_Name: Line of sight
   m_TagString: Untagged
@@ -494,6 +495,18 @@ MonoBehaviour:
   target: {fileID: 0}
   gain: 0
 --- !u!114 &3662361702564767070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7073942622413289510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d3dff7763d9044bb3372a2da830771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4523598744051432909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
