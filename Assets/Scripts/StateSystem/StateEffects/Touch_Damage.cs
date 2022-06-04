@@ -22,6 +22,7 @@ public class Touch_Damage : StateEffect
 
     private void OnTouch(GameObject col)
     {
+        if (col.tag != "Player") return;
         col.GetComponent<Character>().TakeDamage((int)transform.parent.parent.GetComponent<Character>().statBlock.GetStat("Damage"));
     }
 }
