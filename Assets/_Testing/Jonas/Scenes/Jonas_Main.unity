@@ -797,6 +797,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7322403878401851283, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
+      propertyPath: startingRoom
+      value: 
+      objectReference: {fileID: 6894981191423176136, guid: 9f5ded16198caad4b9fec63793e96ba9, type: 3}
+    - target: {fileID: 7322403878401851284, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
+      propertyPath: branching
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322403878401851284, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
+      propertyPath: roomCount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7322403878401851285, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: m_RootOrder
       value: 5
