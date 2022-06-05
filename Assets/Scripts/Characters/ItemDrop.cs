@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    public void DoDrop(GameObject drop)
+    public void DoDrop(Vector3 pos)
     {
         // Spawn drops
-
-        Destroy(drop);
     }
 }

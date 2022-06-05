@@ -186,7 +186,7 @@ public class Character : MonoBehaviour
     {
         if (pos < weapons.Count)
         {
-            Debug.Log(gameObject.name);
+            //Debug.Log(gameObject.name);
             if (activeWeapon >= 0 && removeOld)
                 statBlock.Remove(weapons[activeWeapon].statBlockHolding);
             activeWeapon = pos;
@@ -269,7 +269,7 @@ public class Character : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (iFrames > 0 || tarots.HasFlag(Tarot.TheLovers)) return;
-        Debug.Log($"Damage taken: {damage}");
+        // Debug.Log($"Damage taken: {damage}");
         if (tarots.HasFlag(Tarot.TheHangedMan)) damage *= 2;
         if (tarots.HasFlag(Tarot.Judgement)) damage *= 2;
         if (tarots.HasFlag(Tarot.TheTower)) damage *= 2;
@@ -278,14 +278,16 @@ public class Character : MonoBehaviour
 
         health -= damage;
 
-        Debug.Log($"{gameObject.name} hp: {health}");
+        //Debug.Log($"{gameObject.name} hp: {health}");
 
         if (health <= 0)
         {
             if (tag == "Player")
                 GameOver();
             else
-                GameObject.Find("DropManager").GetComponent<ItemDrop>().DoDrop(gameObject);
+            {
+                transform.parent.parent.GetComponent<RoomActive>().CheckCount(gameObject);
+            }
         }
         iFrames = statBlock.GetStat("IFrames");
     }
