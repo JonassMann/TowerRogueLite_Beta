@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
+  m_Name: Magical Greatsword
+  m_EditorClassIdentifier: 
+  itemName: 
+  description: 
+  sprite: {fileID: 21300000, guid: 9eb0d1a6505b8d64d98125885d1ba39e, type: 3}
+  statBlock: {fileID: 0}
+  weaponSprite: {fileID: 21300000, guid: 9eb0d1a6505b8d64d98125885d1ba39e, type: 3}
+  projectile: {fileID: 3985100975736016608, guid: 3a6f730f20985b440bca1ca7e103c8ed, type: 3}
+  statBlockHolding: {fileID: 11400000, guid: c70f8c6ce2ddf31459772d90cd1fedfa, type: 2}
