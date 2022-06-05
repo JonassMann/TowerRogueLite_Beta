@@ -1185,7 +1185,7 @@ PrefabInstance:
     - target: {fileID: 3073857175049706578, guid: 417d685ec7ee57e49afe2862532f2aed, type: 3}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: bab7c5832d44d134680857a4f4a2ea40, type: 2}
+      objectReference: {fileID: 11400000, guid: a3fd3201470ae82499130b32f35fcf8a, type: 2}
     - target: {fileID: 3073857175049706579, guid: 417d685ec7ee57e49afe2862532f2aed, type: 3}
       propertyPath: m_RootOrder
       value: 1
