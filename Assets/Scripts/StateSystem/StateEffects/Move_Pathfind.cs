@@ -25,6 +25,8 @@ public class Move_Pathfind : StateEffect
 
     private bool active;
 
+    private float repeatTimer;
+
     private void Awake()
     {
         grid = new PathGrid();
@@ -53,11 +55,18 @@ public class Move_Pathfind : StateEffect
             actualTarget = moveTarget;
         else return;
 
-        InvokeRepeating(nameof(GetPath), 0, .2f);
+        //InvokeRepeating(nameof(GetPath), 0, .2f);
     }
 
     public override State OnUpdate(GameObject user, GameObject target, GameObject moveTarget)
     {
+        if(repeatTimer <= 0)
+        {
+            GetPath();
+            repeatTimer = .2f;
+        }
+        else repeatTimer -= Time.deltaTime;
+
         if (moveDir != null) user.GetComponent<Character>().moveInput += (Vector2)moveDir * weight;
 
         return null;
@@ -65,7 +74,7 @@ public class Move_Pathfind : StateEffect
 
     private void GetPath()
     {
-        if (active == false) CancelInvoke();
+        if (active == false) return;
         //Debug.Log(actualTarget.transform.position);
         path = pathFinder.FindPath(actualUser.transform.position, actualTarget.transform.position);
 

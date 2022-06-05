@@ -9,6 +9,7 @@ public class MapCreator : MonoBehaviour
     public float roomSizeY;
 
     private Dictionary<Border, List<GameObject>> rooms;
+    public GameObject startingRoom;
 
     private Minimap miniMap;
 
@@ -50,7 +51,7 @@ public class MapCreator : MonoBehaviour
         }
 
         foreach (KeyValuePair<(int, int), Border> k in map)
-            Instantiate(GetRoom(k.Value), new Vector3(k.Key.Item1 * roomSizeX, k.Key.Item2 * roomSizeY, 0), Quaternion.identity, transform);
+            Instantiate(k.Key == (0, 0) ? startingRoom : GetRoom(k.Value), new Vector3(k.Key.Item1 * roomSizeX, k.Key.Item2 * roomSizeY, 0), Quaternion.identity, transform);
     }
 
     private GameObject GetRoom(Border b)

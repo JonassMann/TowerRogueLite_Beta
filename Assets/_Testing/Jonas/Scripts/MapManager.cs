@@ -6,7 +6,6 @@ using UnityEditor;
 public class MapManager : MonoBehaviour
 {
     public int roomCount;
-    public int tRoomCount;
 
     //public float roomSizeX;
     //public float roomSizeY;
@@ -28,10 +27,11 @@ public class MapManager : MonoBehaviour
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
     //        CreateMap();
 
-    //    if (Input.GetKeyDown(KeyCode.B))
     //        GetComponent<MapCreator>().FillMap(map);
+    //    }
     //}
 
     public void CreateMap()
@@ -42,7 +42,14 @@ public class MapManager : MonoBehaviour
         Queue<(int, int)> roomList = new Queue<(int, int)>();
 
         tempMap.Add((0, 0));
-        roomList.Enqueue(tempMap[0]);
+        tempMap.Add((1, 0));
+        tempMap.Add((0, 1));
+        tempMap.Add((-1, 0));
+        tempMap.Add((0, -1));
+        roomList.Enqueue(tempMap[1]);
+        roomList.Enqueue(tempMap[2]);
+        roomList.Enqueue(tempMap[3]);
+        roomList.Enqueue(tempMap[4]);
 
         int maxLoops = 10000;
 
