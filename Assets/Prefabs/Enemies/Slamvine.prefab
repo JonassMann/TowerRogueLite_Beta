@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1124161358165431599}
   - component: {fileID: 2052654974468430172}
   m_Layer: 0
-  m_Name: slamvine-Sheet_0 (4)
+  m_Name: Slamvine
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

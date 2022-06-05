@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 8812201775244615243}
   - component: {fileID: 1240165595869583113}
   m_Layer: 8
-  m_Name: shroom_0
+  m_Name: Shrrom
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 6808772628672432893, guid: 68b24cd772212ec4499cb127d7e814f2, type: 3}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: cf3122bff21715944a22819d6815e07d, type: 2}
+      objectReference: {fileID: 11400000, guid: 95a24075334c925498b214371bab27b1, type: 2}
     - target: {fileID: 6808772628672432894, guid: 68b24cd772212ec4499cb127d7e814f2, type: 3}
       propertyPath: m_Name
       value: Andreas Test

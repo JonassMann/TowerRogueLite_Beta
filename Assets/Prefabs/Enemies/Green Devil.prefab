@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7073942622294511480}
   - component: {fileID: 7073942622294511360}
   m_Layer: 8
-  m_Name: greendevil_0
+  m_Name: Green Devil
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
