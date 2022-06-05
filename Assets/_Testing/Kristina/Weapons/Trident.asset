@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
-  m_Name: Banjo
+  m_Name: Trident
   m_EditorClassIdentifier: 
   itemName: Banjo
   description: 
   sprite: {fileID: 0}
   statBlock: {fileID: 0}
-  weaponSprite: {fileID: 21300000, guid: bcaa6bdb081c9d04fbd717c849b958b2, type: 3}
+  weaponSprite: {fileID: 21300000, guid: 7bc424741a5625e44944c6ab74a4d83d, type: 3}
   projectile: {fileID: 2160372845677814760, guid: 5128d44ae4bee8742bb8c7ab9d9d10be, type: 3}
   statBlockHolding: {fileID: 11400000, guid: c70f8c6ce2ddf31459772d90cd1fedfa, type: 2}

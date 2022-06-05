@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8372460960133043833}
   - component: {fileID: 2382919986987845351}
   m_Layer: 0
-  m_Name: Snek spit
+  m_Name: SpittySnekProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7707203915015254350}
   - component: {fileID: 8372460960133043833}
   m_Layer: 0
-  m_Name: RazorTooth Projectile
+  m_Name: CuoidsBowProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c1872f07d5947cc42844992989ab7d08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 355779c4a4b33f34290ac353010d0331, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

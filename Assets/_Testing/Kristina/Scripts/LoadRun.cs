@@ -16,6 +16,6 @@ public class LoadRun : MonoBehaviour
 
     public void GameScene()
     {
-        SceneManager.LoadScene("StartingRoom");
+        SceneManager.LoadScene("StartRun");
     }
 }
