@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomActive : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class RoomActive : MonoBehaviour
     private GameObject enemies;
 
     private bool roomCompleted = false;
+
+    private int enemyNum;
+
+    public Image mapObj;
 
     private void Awake()
     {
@@ -21,6 +26,8 @@ public class RoomActive : MonoBehaviour
         room.SetActive(false);
         doors.SetActive(false);
         enemies.SetActive(false);
+
+        enemyNum = enemies.transform.childCount;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +37,8 @@ public class RoomActive : MonoBehaviour
         room.SetActive(true);
         doors.SetActive(!roomCompleted);
         enemies.SetActive(true);
+        GameObject.Find("MapManager").GetComponent<MapCreator>().UpdateMiniMap(transform.position);
+        mapObj.color = Color.white;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -40,17 +49,20 @@ public class RoomActive : MonoBehaviour
         room.SetActive(false);
         roomCompleted = true;
         enemies.SetActive(false);
+        mapObj.color = Color.green;
     }
 
     public void CheckCount(GameObject enemy)
     {
-        GameObject.Find("DropManager").GetComponent<ItemDrop>().DoDrop(enemy.transform.position);
+        enemyNum--;
+        GameObject.Find("DropManager").GetComponent<ItemDrop>().DoDrop(enemy.transform.position, transform);
 
-        Debug.Log(enemies.transform.childCount);
+        //Debug.Log(enemies.transform.childCount);
 
-        if(enemies.transform.childCount <= 1)
+        if(enemyNum <= 0)
         {
             roomCompleted = true;
+            GameObject.Find("MapManager").GetComponent<MapCreator>().RoomDone();
             doors.SetActive(false);
         }
 

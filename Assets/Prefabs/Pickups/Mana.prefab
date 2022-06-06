@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 835180625374656456}
   - component: {fileID: 835180625374656463}
   m_Layer: 0
-  m_Name: Tarot
-  m_TagString: Tarot
+  m_Name: Mana
+  m_TagString: Mana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -99,8 +99,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7f9fe9a585cf70b46898af0dd3a1bc0d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -4642333198030113882, guid: 2e8e145275ed1ae4b846f067bb941dee, type: 3}
+  m_Color: {r: 0, g: 0.003575325, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68865d426fa19ec43a34fff681ec3d8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  value: 4

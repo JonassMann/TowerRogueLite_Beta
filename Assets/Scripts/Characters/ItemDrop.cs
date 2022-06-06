@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    public void DoDrop(Vector3 pos)
+    public List<GameObject> drops;
+
+
+    public void DoDrop(Vector3 pos, Transform parent)
     {
-        // Spawn drops
+        int dropNum = Random.Range(0, 4);
+        if (dropNum == 3) return;
+
+        Instantiate(drops[dropNum], pos, Quaternion.identity, parent);
     }
 }

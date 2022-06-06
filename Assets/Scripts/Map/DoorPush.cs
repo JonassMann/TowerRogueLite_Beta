@@ -12,7 +12,7 @@ public class DoorPush : MonoBehaviour
 
     private void OnEnable()
     {
-        startPos = transform.position;
+        startPos = transform.position - (transform.up * 1);
         endPos = transform.position + (transform.up * 1);
 
         startTime = Time.time;
