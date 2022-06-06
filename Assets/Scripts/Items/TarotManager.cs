@@ -111,7 +111,8 @@ public class TarotManager : MonoBehaviour
                 ch.tarots |= Tarot.TheHermit;
                 break;
             case Tarot.TheWheelOfFortune:
-                ch.tarots |= Tarot.TheWheelOfFortune;
+                current = values[UnityEngine.Random.Range(1, values.Length)];
+                UseTarot();
                 break;
             case Tarot.Justice:
                 ch.tarots |= Tarot.Justice;

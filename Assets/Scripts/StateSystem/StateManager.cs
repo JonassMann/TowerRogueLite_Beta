@@ -8,7 +8,7 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         currentState.StateStart();
     }
 
