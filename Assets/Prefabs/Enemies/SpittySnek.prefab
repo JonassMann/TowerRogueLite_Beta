@@ -169,7 +169,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 11400000, guid: 3c3e54780ca6b80459b35e761346ea9a, type: 2}
   items: []
-  statBlock: {fileID: 0}
+  statBlock: {fileID: 11400000, guid: 95a546893872b744cb7230be2ec656d2, type: 2}
   moveInput: {x: 0, y: 0}
   shooting: 0
   lookDir: {x: 0, y: 0}
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &4861443267616154427
 Rigidbody2D:
   serializedVersion: 4

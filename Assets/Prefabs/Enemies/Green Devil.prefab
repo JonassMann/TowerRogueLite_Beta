@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &7073942622294511482
 Rigidbody2D:
   serializedVersion: 4
@@ -410,7 +411,7 @@ Animation:
   m_GameObject: {fileID: 7073942622294511481}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: d31f597deed70bc439db55aa324a04fc, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1

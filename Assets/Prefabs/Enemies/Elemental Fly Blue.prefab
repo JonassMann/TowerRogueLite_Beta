@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713d215f5d676f846a2345ab24f52e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingStats: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
+  startingStats: {fileID: 11400000, guid: 8c4ac3269180d3f4a92326ea10ecaa0c, type: 2}
   weapons: []
   items: []
   statBlock: {fileID: 0}
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &4329129598444430217
 Rigidbody2D:
   serializedVersion: 4

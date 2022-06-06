@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713d215f5d676f846a2345ab24f52e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingStats: {fileID: 11400000, guid: 3189bc72bb73abc418c2c17951be2956, type: 2}
+  startingStats: {fileID: 11400000, guid: fba980927c3673f4ebff8f32451db7a3, type: 2}
   weapons:
   - {fileID: 11400000, guid: f3d5d576ffd711d4bb299c6382f05f6a, type: 2}
   items: []
