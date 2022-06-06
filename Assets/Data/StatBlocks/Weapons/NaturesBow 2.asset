@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a9d64f654684b4a83c4c611fbbc9ee, type: 3}
-  m_Name: NaturesBow
+  m_Name: NaturesBow 2
   m_EditorClassIdentifier: 
   statList:
   - key: ProjectileCount
