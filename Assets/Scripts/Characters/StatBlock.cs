@@ -73,6 +73,11 @@ public class StatBlock : ScriptableObject
         return stat * multiplier;
     }
 
+    public bool HasStat(string statName)
+    {
+        return stats.ContainsKey(statName);
+    }
+
     [Serializable]
     public struct ValuePair
     {
