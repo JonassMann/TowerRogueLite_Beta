@@ -19,6 +19,9 @@ public class TarotManager : MonoBehaviour
 
     Tarot[] values;
 
+    [SerializeField] private AudioSource tarotCollect;
+    [SerializeField] private AudioSource tarotUse;
+
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -45,11 +48,14 @@ public class TarotManager : MonoBehaviour
 
     private void Tarot_performed(InputAction.CallbackContext obj)
     {
+        if (current == Tarot.None) return;
+        tarotUse.Play();
         UseTarot();
     }
 
     public void AddTarot(int count)
     {
+        tarotCollect.Play();
         for (int i = 0; i < count; i++)
         {
             deck.Enqueue(values[UnityEngine.Random.Range(1, values.Length)]);
