@@ -13,6 +13,8 @@ public class ConsumablePickup : MonoBehaviour
     {
         if (collision.gameObject.tag != "Player") return;
 
+
+
         if (gameObject.tag == "Health")
             collision.gameObject.GetComponent<Character>().Heal(value);
         else if (gameObject.tag == "Mana")
