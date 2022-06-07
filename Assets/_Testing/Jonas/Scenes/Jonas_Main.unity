@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1938178369, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3124497186981942595, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -642,6 +638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3073857175049706577, guid: 829bd12a91f2aab4a80b9eacb27e8443, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3073857175049706579, guid: 829bd12a91f2aab4a80b9eacb27e8443, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -766,6 +766,10 @@ PrefabInstance:
     - target: {fileID: 7322403878401851282, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: m_Name
       value: MapManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322403878401851284, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
+      propertyPath: roomCount
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7322403878401851285, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: m_RootOrder

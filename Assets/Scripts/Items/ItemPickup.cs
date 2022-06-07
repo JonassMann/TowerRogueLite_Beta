@@ -33,6 +33,8 @@ public class ItemPickup : MonoBehaviour
         if (collision.gameObject.tag != "Player" || cooldown > 0) return;
         cooldown = touchCooldown;
 
+
+
         if (item is Weapon)
         {
             Item tempItem = collision.gameObject.GetComponent<Character>().AddWeapon(item as Weapon);
