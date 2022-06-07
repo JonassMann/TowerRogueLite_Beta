@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2053935182017247111}
   - component: {fileID: 7755683849238668159}
   - component: {fileID: 5590242135597459172}
-  - component: {fileID: -3421374642696446326}
   m_Layer: 0
   m_Name: WeaponDrop
   m_TagString: Untagged
@@ -114,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWeapon: 1
+  isItem: 0
   items: []
   weapons:
   - {fileID: 11400000, guid: 3dc43a0aeda095749a4e9053a1eca6af, type: 2}
@@ -133,5 +133,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bab7c5832d44d134680857a4f4a2ea40, type: 2}
   - {fileID: 11400000, guid: a3fd3201470ae82499130b32f35fcf8a, type: 2}
   - {fileID: 11400000, guid: 4550d9a274a9ce042a0392cee218074e, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f24f62ba2b958554099aa77eca005493, type: 2}
+  item: {fileID: 0}
+  weaponPickUpSound: {fileID: 0}
