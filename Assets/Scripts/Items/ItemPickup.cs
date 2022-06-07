@@ -18,7 +18,7 @@ public class ItemPickup : MonoBehaviour
     private float cooldown = 0;
 
     [SerializeField] private AudioSource weaponPickUpSound;
-    
+
 
     private void Awake()
     {
@@ -48,7 +48,8 @@ public class ItemPickup : MonoBehaviour
         if (collision.gameObject.tag != "Player" || cooldown > 0) return;
         cooldown = touchCooldown;
 
-        weaponPickUpSound.Play();
+        if (weaponPickUpSound != null)
+            weaponPickUpSound.Play();
 
         if (item is Weapon)
         {
