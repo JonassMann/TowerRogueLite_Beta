@@ -29,7 +29,11 @@ public class ItemPickup : MonoBehaviour
         if (item is Weapon)
         {
             Item tempItem = collision.gameObject.GetComponent<Character>().AddWeapon(item as Weapon);
-            if (tempItem == null) Destroy(gameObject);
+            if (tempItem == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
             item = tempItem;
             GetComponent<SpriteRenderer>().sprite = item.sprite;
         }
