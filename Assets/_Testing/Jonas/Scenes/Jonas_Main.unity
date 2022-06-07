@@ -763,6 +763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7322403878401851283, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
+      propertyPath: bossRoom
+      value: 
+      objectReference: {fileID: 6519849273935850713, guid: f9f55634394f7b744b03b311f29a3273, type: 3}
     - target: {fileID: 7322403878401851285, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: m_RootOrder
       value: 4

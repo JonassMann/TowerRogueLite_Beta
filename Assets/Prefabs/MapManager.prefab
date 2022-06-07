@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccb1c88d7cc9934cb3dfab1dc278bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomCount: 5
+  roomCount: 10
   branching: 50
   drawMap: 1
 --- !u!114 &7322403878401851283
@@ -62,5 +62,5 @@ MonoBehaviour:
   roomSizeX: 20
   roomSizeY: 20
   startingRoom: {fileID: 6894981191423176136, guid: 9f5ded16198caad4b9fec63793e96ba9, type: 3}
-  bossRoom: {fileID: 6894981191423176136, guid: 4f6199470c1810e4d81d48b40d3d39ea, type: 3}
+  bossRoom: {fileID: 6519849273935850713, guid: f9f55634394f7b744b03b311f29a3273, type: 3}
   mapPrefab: {fileID: 5477738073555122522, guid: 58260a38e26d75040b3416eefeb38f66, type: 3}
