@@ -13,7 +13,8 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        shotSound.Play();
+        if (shotSound != null)
+            shotSound.Play();
 
     }
 
