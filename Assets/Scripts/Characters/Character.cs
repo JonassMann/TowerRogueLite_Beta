@@ -296,7 +296,8 @@ public class Character : MonoBehaviour
 
         if (health <= 0)
         {
-            deathSound.Play();
+            if(deathSound != null)
+                deathSound.Play();
 
             if (tag == "Player")
                 GameOver();
