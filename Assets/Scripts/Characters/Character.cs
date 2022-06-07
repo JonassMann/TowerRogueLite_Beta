@@ -288,7 +288,7 @@ public class Character : MonoBehaviour
 
         //Sound on Hit
 
-        if(health > 0)
+        if(health > 0 && hitSound != null)
             hitSound.Play();
 
 
