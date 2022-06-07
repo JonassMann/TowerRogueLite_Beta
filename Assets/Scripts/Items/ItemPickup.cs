@@ -6,13 +6,20 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ItemPickup : MonoBehaviour
 {
-    public Item item;
+    public bool isWeapon = false;
+
+    public List<Item> items;
+    public List<Weapon> weapons;
+
+    private Item item;
     private const float touchCooldown = 2f;
 
     private float cooldown = 0;
 
     private void Awake()
     {
+        item = isWeapon ? weapons[Random.Range(0, weapons.Count)] : items[Random.Range(0, items.Count)];
+
         GetComponent<SpriteRenderer>().sprite = item.sprite;
     }
 
