@@ -288,7 +288,8 @@ public class Character : MonoBehaviour
 
         //Sound on Hit
 
-        hitSound.Play();
+        if(health > 0)
+            hitSound.Play();
 
 
         //Debug.Log($"{gameObject.name} hp: {health}");
