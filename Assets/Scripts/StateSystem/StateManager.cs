@@ -9,7 +9,8 @@ public class StateManager : MonoBehaviour
     private void Start()
     {
         //Debug.Log(gameObject.name);
-        currentState.StateStart();
+        if (currentState != null)
+            currentState.StateStart();
     }
 
     private void Update()
