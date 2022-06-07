@@ -14,8 +14,8 @@ public class TarotManager : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     public Dictionary<string, Sprite> tarotSprites;
-    public Image tarotimage;
-    public TMP_Text tarotNum;
+    private Image tarotimage;
+    private TMP_Text tarotNum;
 
     Tarot[] values;
 
@@ -24,6 +24,9 @@ public class TarotManager : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         playerInputActions.Enable();
         playerInputActions.Player.Tarot.performed += Tarot_performed;
+
+        tarotimage = GameObject.Find("CurrentTarot").GetComponent<Image>();
+        tarotNum = GameObject.Find("TarotCount").GetComponent<TMP_Text>();
 
         values = (Tarot[])Enum.GetValues(typeof(Tarot));
     }

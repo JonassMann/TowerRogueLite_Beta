@@ -7,9 +7,14 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rb;
     private int damage;
 
+    [SerializeField] private AudioSource shotSound;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        shotSound.Play();
+
     }
 
     public void Init(float velocity, float duration, int damage)

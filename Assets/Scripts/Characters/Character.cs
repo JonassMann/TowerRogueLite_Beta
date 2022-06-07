@@ -42,6 +42,10 @@ public class Character : MonoBehaviour
     [HideInInspector]
     public Tarot tarots;
 
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource hitSound;
+    [SerializeField] private AudioSource deathSound;
+
     private void Awake()
     {
         InitStats();
@@ -235,6 +239,10 @@ public class Character : MonoBehaviour
             return;
         }
 
+
+
+
+
         float projectileCount = statBlock.GetStat("ProjectileCount");
         if (projectileCount < 1) projectileCount = 1;
         float projectileSpread = statBlock.GetStat("ProjectileSpread");
@@ -278,10 +286,17 @@ public class Character : MonoBehaviour
 
         health -= damage;
 
+        //Sound on Hit
+
+        hitSound.Play();
+
+
         //Debug.Log($"{gameObject.name} hp: {health}");
 
         if (health <= 0)
         {
+            deathSound.Play();
+
             if (tag == "Player")
                 GameOver();
             else
@@ -295,8 +310,8 @@ public class Character : MonoBehaviour
     public void Heal(float value)
     {
         float healthAdd = value;
-        healthAdd *=  tarots.HasFlag(Tarot.Strength) ? 2 : 1;
-        healthAdd *=  tarots.HasFlag(Tarot.TheStar) ? 2 : 1;
+        healthAdd *= tarots.HasFlag(Tarot.Strength) ? 2 : 1;
+        healthAdd *= tarots.HasFlag(Tarot.TheStar) ? 2 : 1;
 
         health += healthAdd;
 
@@ -343,6 +358,7 @@ public class Character : MonoBehaviour
     private IEnumerator DoJump()
     {
         dashing = true;
+        dashSound.Play();
         // Jump Animation Start
         iFrames = statBlock.GetStat("JumpDuration");
         rb.velocity = moveInput * statBlock.GetStat("JumpSpeed");
