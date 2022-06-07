@@ -241,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3051608566835361355, guid: e3b1043ae0f0b6a45bc5855c0c45178e, type: 3}
       propertyPath: m_Name
-      value: Knight
+      value: Knight Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3b1043ae0f0b6a45bc5855c0c45178e, type: 3}

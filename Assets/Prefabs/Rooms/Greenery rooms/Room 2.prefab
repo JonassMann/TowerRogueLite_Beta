@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &2998199334693665857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &5253247568970710746
 Rigidbody2D:
   serializedVersion: 4
@@ -298,6 +302,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &7962878239220613771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!1 &350641252459486618
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +679,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -739,6 +747,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &4017086716533381178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &5220097778681602103
 Rigidbody2D:
   serializedVersion: 4
@@ -1056,7 +1068,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1124,6 +1136,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &7721696688449940435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &929272186854890745
 Rigidbody2D:
   serializedVersion: 4
@@ -1242,7 +1258,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1355,7 +1371,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1437,7 +1453,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1558,7 +1574,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1626,6 +1642,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &5459821379618991216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,6 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &5439104188070939978
 Rigidbody2D:
   serializedVersion: 4
@@ -1744,7 +1764,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1857,7 +1877,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1939,7 +1959,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2084,7 +2104,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2291,7 +2311,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2359,6 +2379,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &8906099659654744766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,6 +2394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &3237935019007246608
 Rigidbody2D:
   serializedVersion: 4
@@ -2616,7 +2640,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6803,7 +6827,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16be0825033a98f45bc12a3e6f5fa339, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6883,7 +6907,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7821,7 +7845,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7947,7 +7971,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9089,7 +9113,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9184,7 +9208,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10101,7 +10125,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10180,7 +10204,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10265,6 +10289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1af3e75f99c4124fba04aa7ff8de219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapObj: {fileID: 0}
 --- !u!114 &6519849273935850719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10354,7 +10379,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10627,7 +10652,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10717,7 +10742,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10785,6 +10810,9 @@ MonoBehaviour:
   health: 0
   mana: 0
   tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &7979487472760352928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10797,6 +10825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drops: []
 --- !u!50 &4056206375646471014
 Rigidbody2D:
   serializedVersion: 4

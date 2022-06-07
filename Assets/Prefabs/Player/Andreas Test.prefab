@@ -72,6 +72,12 @@ MonoBehaviour:
   shooting: 0
   lookDir: {x: 0, y: 0}
   activeWeapon: 0
+  health: 0
+  mana: 0
+  tarots: 0
+  dashSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!212 &6808772628672432895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91,7 +97,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,7 +176,7 @@ Animator:
   m_GameObject: {fileID: 6808772628672432894}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5ccd4c76528487448a744a67f1c3382, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -376,7 +382,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
