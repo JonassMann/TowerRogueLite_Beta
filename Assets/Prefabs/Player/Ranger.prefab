@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 3073857175049706572}
   - component: {fileID: 3073857175049706575}
   - component: {fileID: 3073857175049706574}
+  - component: {fileID: -5101014938543125532}
   m_Layer: 7
   m_Name: Ranger
   m_TagString: Player
@@ -230,7 +231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 3441879777456424529, guid: 5886df7f54b6d0f42993aa1f3ba350b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -298,6 +299,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5101014938543125532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073857175049706577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966e673cf92dfb42b936e6c28106887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tarotimage: {fileID: 0}
+  tarotNum: {fileID: 0}
 --- !u!1 &3073857175953372299
 GameObject:
   m_ObjectHideFlags: 0
