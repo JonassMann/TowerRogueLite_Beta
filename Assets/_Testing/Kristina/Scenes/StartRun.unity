@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.594
       objectReference: {fileID: 0}
+    - target: {fileID: 3073857175049706572, guid: 417d685ec7ee57e49afe2862532f2aed, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3073857175049706577, guid: 417d685ec7ee57e49afe2862532f2aed, type: 3}
       propertyPath: m_Name
       value: Mage

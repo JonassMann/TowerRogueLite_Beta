@@ -114,4 +114,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWeapon: 0
   items: []
-  weapons: []
+  weapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
