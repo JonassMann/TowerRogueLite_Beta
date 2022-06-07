@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 985090154cee1da4789d0c3b7a95a5fa, type: 3}
-  m_Name: Yes, another
+  m_Name: Yes, another 1
   m_EditorClassIdentifier: 
   itemName: 
   description: 
   sprite: {fileID: 0}
   statBlock: {fileID: 0}
+  weaponSprite: {fileID: 0}
   projectile: {fileID: 3644315312330560758, guid: a3c9db1b85fc6fb48aff46c30f11e3af, type: 3}
   statBlockHolding: {fileID: 11400000, guid: e7460324a22d0d046b0ce9ca8f347510, type: 2}
