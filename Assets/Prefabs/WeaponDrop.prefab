@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWeapon: 1
+  isItem: 1
   items: []
   weapons:
   - {fileID: 11400000, guid: 3dc43a0aeda095749a4e9053a1eca6af, type: 2}
@@ -135,3 +136,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4550d9a274a9ce042a0392cee218074e, type: 2}
   - {fileID: 0}
   - {fileID: 0}
+  item: {fileID: 0}
