@@ -7,11 +7,12 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public bool isWeapon = false;
+    public bool isItem = false;
 
     public List<Item> items;
     public List<Weapon> weapons;
 
-    private Item item;
+    public Item item;
     private const float touchCooldown = 2f;
 
     private float cooldown = 0;
@@ -21,7 +22,18 @@ public class ItemPickup : MonoBehaviour
 
     private void Awake()
     {
-        item = isWeapon ? weapons[Random.Range(0, weapons.Count)] : items[Random.Range(0, items.Count)];
+        if (isWeapon)
+        {
+            if (isItem)
+            {
+                int listNum = Random.Range(0, 2);
+                item = listNum == 0 ? weapons[Random.Range(0, weapons.Count)] : items[Random.Range(0, items.Count)];
+            }
+
+            item = weapons[Random.Range(0, weapons.Count)];
+        }
+        else if (isItem)
+            item = items[Random.Range(0, items.Count)];
 
         GetComponent<SpriteRenderer>().sprite = item.sprite;
     }

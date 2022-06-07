@@ -115,101 +115,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWeapon: 1
   items: []
-  weapons: []
-  weaponPickUpSound: {fileID: -3421374642696446326}
---- !u!82 &-3421374642696446326
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6901190196568118131}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f35a1e2c3e747cf409b91d5646208bb4, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  weapons:
+  - {fileID: 11400000, guid: 3dc43a0aeda095749a4e9053a1eca6af, type: 2}
+  - {fileID: 11400000, guid: 4ce6583beab9d1440ae0342c6d04f26f, type: 2}
+  - {fileID: 11400000, guid: e51f3c3137618274e8268b6668f362c1, type: 2}
+  - {fileID: 11400000, guid: 98fa637e1d95d1340975de49753fa804, type: 2}
+  - {fileID: 11400000, guid: 5fb90f813233c5848991588ad40f795b, type: 2}
+  - {fileID: 11400000, guid: c077b3bb5233b8f41b8d462441958fc1, type: 2}
+  - {fileID: 11400000, guid: 6331bdc96d8723643be0cc02cf622bb8, type: 2}
+  - {fileID: 11400000, guid: 48876161ee605c546ab7c6eb1e2fa58b, type: 2}
+  - {fileID: 11400000, guid: 57c7fa5c5c04a0a47953da6e133f633f, type: 2}
+  - {fileID: 11400000, guid: 2f868ab1478604942807754f9f038cea, type: 2}
+  - {fileID: 11400000, guid: 00d42e1a514c6fb4d8d20e97d877fc0f, type: 2}
+  - {fileID: 11400000, guid: 22f2900b960e9d041bcb1e97e35feeb0, type: 2}
+  - {fileID: 11400000, guid: f3d5d576ffd711d4bb299c6382f05f6a, type: 2}
+  - {fileID: 11400000, guid: bd9c055cbfd11db49a2a6c1104c1a90f, type: 2}
+  - {fileID: 11400000, guid: bab7c5832d44d134680857a4f4a2ea40, type: 2}
+  - {fileID: 11400000, guid: a3fd3201470ae82499130b32f35fcf8a, type: 2}
+  - {fileID: 11400000, guid: 4550d9a274a9ce042a0392cee218074e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
