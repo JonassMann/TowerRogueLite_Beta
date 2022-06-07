@@ -18,4 +18,4 @@ MonoBehaviour:
   statBlock: {fileID: 0}
   weaponSprite: {fileID: 21300000, guid: 52085c7642173b443b33b8f94b9c8f3f, type: 3}
   projectile: {fileID: 3095880339944500969, guid: c2742582753eb3b41a98833dc2f12271, type: 3}
-  statBlockHolding: {fileID: 11400000, guid: 0724bd520d971e34d9536081ef820531, type: 2}
+  statBlockHolding: {fileID: 11400000, guid: d7322e15d1f9c6b4f90fc3dac18e21db, type: 2}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Mage
   m_EditorClassIdentifier: 
   statList:
-  - key: MoveSpeed
-    value: 5
   - key: JumpSpeed
     value: 8
+  - key: MoveSpeed
+    value: 4.5
   - key: JumpDuration
     value: 0.3
   - key: JumpCooldown
