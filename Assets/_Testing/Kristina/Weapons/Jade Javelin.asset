@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Banjo
   description: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: fabbf24459189d040b86541260deb7f3, type: 3}
   statBlock: {fileID: 0}
   weaponSprite: {fileID: 21300000, guid: 48857b70e78ea654eae2d5811cb95401, type: 3}
-  projectile: {fileID: 2160372845677814760, guid: 5128d44ae4bee8742bb8c7ab9d9d10be, type: 3}
+  projectile: {fileID: 2160372845677814760, guid: 31280f9c244724344b8556ff9302ba9f, type: 3}
   statBlockHolding: {fileID: 11400000, guid: c70f8c6ce2ddf31459772d90cd1fedfa, type: 2}
