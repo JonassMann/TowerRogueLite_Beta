@@ -40,8 +40,8 @@ public class SwitchCharacter : MonoBehaviour
             Destroy(currentPlayerObject);
             currentPlayerObject = Instantiate(playerPrefabs[index], lastCheckPointPos, Quaternion.identity);
             
-            // fikser ikke missing reference problemet
-            FindObjectOfType<CameraController>().UpdateTarget();
+            //// fikser ikke missing reference problemet
+            //FindObjectOfType<CameraController>().UpdateTarget();
             
             canvas.GetComponent<Canvas>().enabled = false;
         }
