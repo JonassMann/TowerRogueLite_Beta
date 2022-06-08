@@ -1241,7 +1241,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822424560}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
@@ -1508,8 +1508,6 @@ MonoBehaviour:
   - {fileID: 3073857175049706577, guid: bcc1330db5837af4ab2eb7fa1031ab83, type: 3}
   - {fileID: 3073857175049706577, guid: 417d685ec7ee57e49afe2862532f2aed, type: 3}
   - {fileID: 3051608566835361355, guid: e3b1043ae0f0b6a45bc5855c0c45178e, type: 3}
-  characterIndex: 0
-  characterSelect: {fileID: 0}
   canvas: {fileID: 822424560}
   button: {fileID: 470659872}
 --- !u!4 &1061309365
@@ -2538,7 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
