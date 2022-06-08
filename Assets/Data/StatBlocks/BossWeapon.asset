@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statList:
   - key: ProjectileCount
-    value: 4
+    value: 3
   - key: ProjectileSpeed
-    value: 10
+    value: 7
   - key: ProjectileDuration
     value: 4
   - key: WeaponCooldown
     value: 4
   - key: ProjectileSpread
-    value: 10
+    value: 20
   - key: Damage
     value: 1
   - key: WeaponOffset

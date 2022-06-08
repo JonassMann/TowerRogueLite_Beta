@@ -20,7 +20,7 @@ MonoBehaviour:
   - key: ProjectileDuration
     value: 8
   - key: WeaponCooldown
-    value: 2
+    value: 1
   - key: ProjectileSpread
     value: 15
   - key: Damage

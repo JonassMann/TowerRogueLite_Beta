@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3269651145138089963}
   - component: {fileID: 6525717715331205451}
   - component: {fileID: 3097497007549858646}
+  - component: {fileID: 5795303501671453894}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -109,3 +110,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2421865, y: 1.0928824}
   m_EdgeRadius: 0
+--- !u!114 &5795303501671453894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288020209114685131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 977bbdba00000000
+  m_ShapePath:
+  - {x: -0.49763292, y: -0.39012584, z: 0}
+  - {x: -0.41891217, y: -0.49783596, z: 0}
+  - {x: 0.4142889, y: -0.49594155, z: 0}
+  - {x: 0.49053183, y: -0.39391476, z: 0}
+  - {x: 0.48766744, y: 0.15951374, z: 0}
+  - {x: 0.4332253, y: 0.20876761, z: 0}
+  - {x: 0.54734105, y: 0.39391473, z: 0}
+  - {x: 0.4237571, y: 0.48913583, z: 0}
+  - {x: -0.45441788, y: 0.49103016, z: 0}
+  - {x: -0.5544421, y: 0.39770347, z: 0}
+  - {x: -0.44494972, y: 0.20119013, z: 0}
+  - {x: -0.5041259, y: 0.155725, z: 0}
+  m_ShapePathHash: 1866219281
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -258046

@@ -16,7 +16,7 @@ MonoBehaviour:
   - key: ProjectileCount
     value: 1
   - key: ProjectileSpeed
-    value: 25
+    value: 18
   - key: ProjectileDuration
     value: 10
   - key: ProjectileSpread

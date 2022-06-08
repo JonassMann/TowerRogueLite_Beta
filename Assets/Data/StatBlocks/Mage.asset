@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statList:
   - key: JumpSpeed
-    value: 8
+    value: 7
   - key: MoveSpeed
-    value: 4.5
+    value: 4.2
   - key: JumpDuration
     value: 0.3
   - key: JumpCooldown
     value: 1
   - key: Damage
     value: 1
+  - key: MaxHealth
+    value: 9
   - key: IFrames
     value: 1
-  - key: MaxHealth
-    value: 6
   - key: MaxMana
     value: 12
   - key: ManaRegen
