@@ -22,6 +22,6 @@ MonoBehaviour:
   - key: JumpCooldown
     value: 1
   - key: Damage
-    value: 1.2
+    value: 4
   - key: MaxHealth
-    value: 5
+    value: 8

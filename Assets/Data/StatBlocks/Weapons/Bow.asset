@@ -24,8 +24,8 @@ MonoBehaviour:
   - key: ProjectileSpread
     value: 10
   - key: Damage
-    value: 1.8
+    value: 2
   - key: WeaponOffset
     value: 0.4
   - key: ManaCost
-    value: 0.5
+    value: 0.8

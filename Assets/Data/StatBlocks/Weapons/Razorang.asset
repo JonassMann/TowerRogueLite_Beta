@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statList:
   - key: ProjectileCount
-    value: 4
+    value: 3
   - key: ProjectileSpeed
     value: 10
   - key: ProjectileDuration
@@ -24,7 +24,7 @@ MonoBehaviour:
   - key: WeaponCooldown
     value: 0.5
   - key: Damage
-    value: 1
+    value: 2
   - key: WeaponOffset
     value: 0.4
   - key: ManaCost

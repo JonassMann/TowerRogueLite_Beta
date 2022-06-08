@@ -20,7 +20,7 @@ MonoBehaviour:
   - key: ProjectileDuration
     value: 10
   - key: WeaponCooldown
-    value: 0.8
+    value: 0.6
   - key: ProjectileSpread
     value: 12
   - key: Damage
@@ -28,4 +28,4 @@ MonoBehaviour:
   - key: WeaponOffset
     value: 0.4
   - key: ManaCost
-    value: 0.8
+    value: 0.5

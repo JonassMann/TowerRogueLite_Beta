@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statList:
   - key: MoveSpeed
-    value: 4.8
+    value: 4.6
   - key: JumpSpeed
     value: 8
   - key: JumpDuration
@@ -30,4 +30,4 @@ MonoBehaviour:
   - key: MaxMana
     value: 10
   - key: ManaRegen
-    value: 0.5
+    value: 0.4

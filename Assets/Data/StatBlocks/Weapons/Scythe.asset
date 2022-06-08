@@ -26,4 +26,4 @@ MonoBehaviour:
   - key: ManaRegen
     value: 1
   - key: Damage
-    value: 0.5
+    value: 2

@@ -30,4 +30,4 @@ MonoBehaviour:
   - key: MaxMana
     value: 10
   - key: ManaRegen
-    value: 0.4
+    value: 0.3
