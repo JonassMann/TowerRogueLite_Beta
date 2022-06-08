@@ -45,6 +45,7 @@ public class Character : MonoBehaviour
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource hitSound;
     [SerializeField] private AudioSource deathSound;
+    [SerializeField] private AudioSource itemCollect;
 
     private void Awake()
     {
@@ -311,6 +312,9 @@ public class Character : MonoBehaviour
 
     public void Heal(float value)
     {
+        if (itemCollect != null)
+            itemCollect.Play();
+
         float healthAdd = value;
         healthAdd *= tarots.HasFlag(Tarot.Strength) ? 2 : 1;
         healthAdd *= tarots.HasFlag(Tarot.TheStar) ? 2 : 1;
@@ -326,6 +330,9 @@ public class Character : MonoBehaviour
 
     public void MPHeal(float value)
     {
+        if (itemCollect != null)
+            itemCollect.Play();
+
         float manaAdd = value;
         manaAdd *= tarots.HasFlag(Tarot.TheMagician) ? 2 : 1;
 

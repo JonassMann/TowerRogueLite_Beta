@@ -248,6 +248,7 @@ MonoBehaviour:
   dashSound: {fileID: 0}
   hitSound: {fileID: 4272994165662084700}
   deathSound: {fileID: -2819244338566746893}
+  itemCollect: {fileID: 0}
 --- !u!114 &2899842634170189028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops: []
+  currentTarot: {fileID: 0}
 --- !u!50 &2899842634170189029
 Rigidbody2D:
   serializedVersion: 4
@@ -406,7 +408,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e364a8106960e8240acf884dea122c19, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
+  itemCollect: {fileID: 0}
 --- !u!95 &5382305052706853623
 Animator:
   serializedVersion: 3
