@@ -59,7 +59,7 @@ public class RoomActive : MonoBehaviour
 
         //Debug.Log(enemies.transform.childCount);
 
-        if(enemyNum <= 0)
+        if(enemyNum <= 0 && !roomCompleted)
         {
             roomCompleted = true;
             GameObject.Find("MapManager").GetComponent<MapCreator>().RoomDone();

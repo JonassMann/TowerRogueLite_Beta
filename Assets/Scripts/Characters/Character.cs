@@ -276,7 +276,7 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (iFrames > 0 || tarots.HasFlag(Tarot.TheLovers)) return;
+        if (iFrames > 0 || tarots.HasFlag(Tarot.TheLovers) || health <= 0) return;
         // Debug.Log($"Damage taken: {damage}");
         if (tarots.HasFlag(Tarot.TheHangedMan)) damage *= 2;
         if (tarots.HasFlag(Tarot.Judgement)) damage *= 2;
