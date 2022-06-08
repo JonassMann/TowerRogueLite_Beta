@@ -14,13 +14,20 @@ public class CameraController : MonoBehaviour
 
     private Character player;
 
-    private void Start()
+    public void UpdateTarget()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
     }
 
+    private void Start()
+    {
+        UpdateTarget();
+    }
+
     private void Update()
     {
+        if (player == null) { return; }
+
         screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
 
         cameraOffset = Vector2.MoveTowards(cameraOffset, player.moveInput * movementOffset, offsetMoveSpeed * Time.fixedDeltaTime);
@@ -32,4 +39,6 @@ public class CameraController : MonoBehaviour
 
         transform.position = Vector2.Lerp(player.transform.position, targetPosition, sensitivity);
     }
+
+    
 }
