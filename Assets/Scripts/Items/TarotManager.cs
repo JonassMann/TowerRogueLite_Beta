@@ -22,21 +22,31 @@ public class TarotManager : MonoBehaviour
     [SerializeField] private AudioSource tarotCollect;
     [SerializeField] private AudioSource tarotUse;
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    playerInputActions = new PlayerInputActions();
+    //    playerInputActions.Enable();
+    //    playerInputActions.Player.Tarot.performed += Tarot_performed;
+
+    //    tarotimage = GameObject.Find("CurrentTarot").GetComponent<Image>();
+    //    tarotimage.gameObject.SetActive(false);
+    //    tarotNum = GameObject.Find("TarotCount").GetComponent<TMP_Text>();
+
+    //    values = (Tarot[])Enum.GetValues(typeof(Tarot));
+    //}
+
+    void Start()
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Enable();
         playerInputActions.Player.Tarot.performed += Tarot_performed;
 
-        tarotimage = GameObject.Find("CurrentTarot").GetComponent<Image>();
+        tarotimage = GameObject.Find("DropManager").GetComponent<ItemDrop>().currentTarot;
         tarotimage.gameObject.SetActive(false);
         tarotNum = GameObject.Find("TarotCount").GetComponent<TMP_Text>();
 
         values = (Tarot[])Enum.GetValues(typeof(Tarot));
-    }
 
-    void Start()
-    {
         deck = new Queue<Tarot>();
         ch = GetComponent<Character>();
 
@@ -49,7 +59,8 @@ public class TarotManager : MonoBehaviour
     private void Tarot_performed(InputAction.CallbackContext obj)
     {
         if (current == Tarot.None) return;
-        tarotUse.Play();
+        if (tarotUse != null)
+            tarotUse.Play();
         UseTarot();
     }
 
