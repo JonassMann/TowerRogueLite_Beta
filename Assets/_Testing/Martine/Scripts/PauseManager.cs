@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject _resumeButton;
     [SerializeField] private GameObject _exitButton;
 
+   
 
     private void Awake()
     {
@@ -27,14 +29,17 @@ public class PauseManager : MonoBehaviour
     }
 
 
-    private void resume() {
+    private void resume() 
+    {
         setPaused(false);
     }
 
 
     private void exit() {
-        //  exit code
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }
+
+    
 
 
     private void Update()

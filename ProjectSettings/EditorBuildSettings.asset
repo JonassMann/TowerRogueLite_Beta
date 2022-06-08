@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Testing/Andreas/Scenes/Test_Battle.unity
     guid: 8957c2335434f844cbe1f2127167ddcc
   - enabled: 1
-    path: Assets/_Testing/Kristina/Scenes/Main Menu.unity
+    path: Assets/_Testing/Kristina/Scenes/MainMenu.unity
     guid: 1a0d9302fc642d54e9fafd0ca2a49d3b
   - enabled: 1
     path: Assets/_Testing/Kristina/Scenes/HUB.unity
