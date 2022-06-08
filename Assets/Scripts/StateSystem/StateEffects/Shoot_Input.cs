@@ -25,6 +25,7 @@ public class Shoot_Input : StateEffect
     private void ChangeWeapon_performed(InputAction.CallbackContext obj)
     {
         //user.GetComponent<Character>().ChangeWeaponScroll(obj.ReadValue<float>() > 0 ? 1 : -1);
+        if(user == null) playerInputActions.Player.ChangeWeapon.performed -= ChangeWeapon_performed;
         user.GetComponent<Character>().ChangeWeapon(Mathf.Clamp((int)obj.ReadValue<float>(), 0, 1));
     }
 
