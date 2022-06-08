@@ -16,13 +16,21 @@ public class WeaponUI : MonoBehaviour
 
     private int selected = -1;
 
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
-    }
+    //private void Start()
+    //{
+    //    var playerList = GameObject.FindGameObjectsWithTag("Player");
+    //    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
+    //}
 
     private void Update()
     {
+        if (player == null)
+        {
+            var playerList = GameObject.FindGameObjectsWithTag("Player");
+            if (playerList.Length > 0) player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
+            else return;
+        }
+
         if (player.activeWeapon != selected)
         {
             selected = player.activeWeapon;

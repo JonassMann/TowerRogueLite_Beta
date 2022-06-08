@@ -14,13 +14,20 @@ public class CameraController : MonoBehaviour
 
     private Character player;
 
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
-    }
+    //private void Start()
+    //{
+    //    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
+    //}
 
     private void Update()
     {
+        if (player == null)
+        {
+            var playerList = GameObject.FindGameObjectsWithTag("Player");
+            if (playerList.Length > 0) player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
+            else return;
+        }
+
         screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
 
         cameraOffset = Vector2.MoveTowards(cameraOffset, player.moveInput * movementOffset, offsetMoveSpeed * Time.fixedDeltaTime);
