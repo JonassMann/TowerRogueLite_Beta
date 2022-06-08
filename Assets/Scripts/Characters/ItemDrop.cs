@@ -10,10 +10,10 @@ public class ItemDrop : MonoBehaviour
     public Image currentTarot;
     //public GameObject currentTarotObj;
 
-    //private void Awake()
-    //{
-    //    currentTarot = GameObject.Find("CurrentTarot").GetComponent<Image>();
-    //}
+    private void Awake()
+    {
+        currentTarot = GameObject.Find("CurrentTarot").GetComponent<Image>();
+    }
 
     public void DoDrop(Vector3 pos, Transform parent)
     {
