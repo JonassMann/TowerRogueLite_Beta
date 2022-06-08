@@ -23,11 +23,11 @@ MonoBehaviour:
     value: 1
   - key: Damage
     value: 1
+  - key: MaxHealth
+    value: 9
   - key: IFrames
     value: 1
-  - key: MaxHealth
-    value: 8
   - key: MaxMana
-    value: 14
+    value: 12
   - key: ManaRegen
     value: 0.8

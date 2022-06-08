@@ -26,8 +26,8 @@ MonoBehaviour:
   - key: IFrames
     value: 1
   - key: MaxHealth
-    value: 7
+    value: 8
   - key: MaxMana
     value: 10
   - key: ManaRegen
-    value: 0.4
+    value: 0.5
