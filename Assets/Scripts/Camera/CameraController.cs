@@ -19,6 +19,11 @@ public class CameraController : MonoBehaviour
     //    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
     //}
 
+    private void Start()
+    {
+        UpdateTarget();
+    }
+
     private void Update()
     {
         if (player == null)
@@ -39,4 +44,6 @@ public class CameraController : MonoBehaviour
 
         transform.position = Vector2.Lerp(player.transform.position, targetPosition, sensitivity);
     }
+
+    
 }
