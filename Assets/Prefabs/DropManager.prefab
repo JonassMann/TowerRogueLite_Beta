@@ -47,3 +47,4 @@ MonoBehaviour:
   - {fileID: 835180625374656462, guid: 0a71370ac6e43aa4999c9c933f976f43, type: 3}
   - {fileID: 835180625374656462, guid: b930ca2cdf4a01945aa8a7ad28ef591d, type: 3}
   - {fileID: 835180625374656462, guid: f47f15fd2eb904347b0736823970f4cd, type: 3}
+  currentTarot: {fileID: 0}

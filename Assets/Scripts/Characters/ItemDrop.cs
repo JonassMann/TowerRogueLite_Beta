@@ -8,6 +8,7 @@ public class ItemDrop : MonoBehaviour
     public List<GameObject> drops;
 
     public Image currentTarot;
+    //public GameObject currentTarotObj;
 
     //private void Awake()
     //{
