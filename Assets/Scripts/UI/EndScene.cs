@@ -19,7 +19,8 @@ public class EndScene : MonoBehaviour
 
     public void exit()
     {
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
     private void setPaused(bool paused)

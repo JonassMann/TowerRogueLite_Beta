@@ -32,8 +32,10 @@ public class PauseManager : MonoBehaviour
     }
 
 
-    public void exit() {
-        SceneManager.LoadScene(0);
+    public void exit()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
     
