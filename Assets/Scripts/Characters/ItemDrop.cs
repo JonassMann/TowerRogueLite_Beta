@@ -10,7 +10,7 @@ public class ItemDrop : MonoBehaviour
     public Image currentTarot;
     //public GameObject currentTarotObj;
 
-    private void Awake()
+    private void Start()
     {
         currentTarot = GameObject.Find("CurrentTarot").GetComponent<Image>();
     }
