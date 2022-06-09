@@ -24,4 +24,4 @@ MonoBehaviour:
   - key: Damage
     value: 3
   - key: MaxHealth
-    value: 100
+    value: 150
