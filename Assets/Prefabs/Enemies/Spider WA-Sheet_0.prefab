@@ -567,15 +567,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42dcf707146fc24da42dc4da43925b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 6
   square: 0
   grid: 0
-  free: 1
+  free: 0
   returnOnChange: 0
   wallMask:
     serializedVersion: 2
-    m_Bits: 0
-  walkTime: 10
+    m_Bits: 64
+  walkTime: 3
 --- !u!114 &3636925195039220079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e164e02f9e36ce44ebed3746141085a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.2
+  weight: 0.4
   target: {fileID: 0}
 --- !u!114 &8807368448801316231
 MonoBehaviour:

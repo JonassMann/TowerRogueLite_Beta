@@ -63,7 +63,7 @@ MonoBehaviour:
   range: 8
   square: 0
   grid: 0
-  free: 1
+  free: 0
   returnOnChange: 0
   wallMask:
     serializedVersion: 2
