@@ -14,44 +14,27 @@ public class SwitchCharacter : MonoBehaviour
 
     public GameObject canvas;
 
-    public GameObject button; 
-    private Button[] buttons;
-
-
-    private Button[] GetButtonList()
-    {
-        return button.GetComponentsInChildren<Button>();
-    }
-
     private void Awake()
     {
         int index = PlayerPrefs.GetInt("SelectedCharacter", 0);
 
         currentPlayerObject = Instantiate(playerPrefabs[index], lastCheckPointPos, Quaternion.identity);
-        
-        buttons = GetButtonList();
-        foreach (Button b in buttons)
-        {
-            b.onClick.AddListener(delegate{SelectCharacter(b.transform.GetSiblingIndex()); });
-        }
+    }
 
-        void SelectCharacter(int index)
-        {
-            Destroy(currentPlayerObject);
-            currentPlayerObject = Instantiate(playerPrefabs[index], lastCheckPointPos, Quaternion.identity);
-            
-            //// fikser ikke missing reference problemet
-            //FindObjectOfType<CameraController>().UpdateTarget();
-            
-            canvas.GetComponent<Canvas>().enabled = false;
-        }
+    public void SelectCharacter(int index)
+    {
+        PlayerPrefs.SetInt("SelectedCharacter", index);
+        Destroy(currentPlayerObject);
+        currentPlayerObject = Instantiate(playerPrefabs[index], lastCheckPointPos, Quaternion.identity);
+
+        canvas.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
         {
-            canvas.GetComponent<Canvas>().enabled = true;
+            canvas.SetActive(true);
         }
     }
 }

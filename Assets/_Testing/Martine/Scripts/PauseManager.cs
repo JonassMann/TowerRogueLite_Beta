@@ -10,33 +10,32 @@ public class PauseManager : MonoBehaviour
     public bool isPaused = false;
     
     public GameObject menu;
-    private Canvas menuCanvas;
 
-    [SerializeField] private GameObject _resumeButton;
-    [SerializeField] private GameObject _exitButton;
+    //[SerializeField] private GameObject _resumeButton;
+    //[SerializeField] private GameObject _exitButton;
 
    
 
-    private void Awake()
-    {
-        menuCanvas = menu.GetComponent<Canvas>();
+    //private void Awake()
+    //{
+    //    Button btn = _resumeButton.GetComponent<Button>();
+    //    btn.onClick.AddListener(resume);
 
-        Button btn = _resumeButton.GetComponent<Button>();
-        btn.onClick.AddListener(resume);
-
-        btn = _exitButton.GetComponent<Button>();
-        btn.onClick.AddListener(exit);
-    }
+    //    btn = _exitButton.GetComponent<Button>();
+    //    btn.onClick.AddListener(exit);
+    //}
 
 
-    private void resume() 
+    public void resume() 
     {
         setPaused(false);
     }
 
 
-    private void exit() {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+    public void exit()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
     
@@ -54,7 +53,7 @@ public class PauseManager : MonoBehaviour
     private void setPaused(bool paused)
     {
         isPaused = paused;
-        menuCanvas.enabled = paused;
+        menu.SetActive(paused);
         SetTimeScale();
     }
 

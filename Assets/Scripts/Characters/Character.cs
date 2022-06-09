@@ -72,6 +72,8 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) return;
+
         if (shootCD > 0) shootCD -= Time.deltaTime;
         if (jumpCD > 0) jumpCD -= Time.deltaTime;
         if (iFrames > 0) iFrames -= Time.deltaTime;
@@ -240,10 +242,6 @@ public class Character : MonoBehaviour
             return;
         }
 
-
-
-
-
         float projectileCount = statBlock.GetStat("ProjectileCount");
         if (projectileCount < 1) projectileCount = 1;
         float projectileSpread = statBlock.GetStat("ProjectileSpread");
@@ -304,6 +302,7 @@ public class Character : MonoBehaviour
                 GameOver();
             else
             {
+                if(name == "Boss") GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd("Win");
                 transform.parent.parent.GetComponent<RoomActive>().CheckCount(gameObject);
             }
         }
@@ -349,6 +348,8 @@ public class Character : MonoBehaviour
             tarots &= ~Tarot.TheFool;
             return;
         }
+
+        GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd("Lose");
         Debug.Log("Player ded");
     }
 
