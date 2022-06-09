@@ -33,7 +33,7 @@ public class PauseManager : MonoBehaviour
 
 
     public void exit() {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene(0);
     }
 
     
