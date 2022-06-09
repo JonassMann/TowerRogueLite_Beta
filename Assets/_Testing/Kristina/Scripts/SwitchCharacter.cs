@@ -36,5 +36,12 @@ public class SwitchCharacter : MonoBehaviour
         {
             canvas.SetActive(true);
         }
+
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        canvas.SetActive(false);
     }
 }
+
+
