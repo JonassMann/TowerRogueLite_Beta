@@ -6,33 +6,25 @@ using TMPro;
 
 public class EndScene : MonoBehaviour
 {
-    public bool isPaused = false;
+    public GameObject winObj;
+    public GameObject loseObj;
 
-    public GameObject menu;
-    public TMP_Text text;
-
-    public void GameEnd(string endText)
+    public void GameEnd(bool win)
     {
-        text.text = endText;
-        setPaused(true);
+        if (win) winObj.SetActive(true);
+        else loseObj.SetActive(true);
+        Time.timeScale = 0;
     }
 
-    public void exit()
+    public void Exit()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
-    private void setPaused(bool paused)
+    public void Continue()
     {
-        isPaused = paused;
-        menu.SetActive(paused);
-        SetTimeScale();
-    }
-
-
-    private void SetTimeScale()
-    {
-        Time.timeScale = isPaused ? 0 : 1;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }

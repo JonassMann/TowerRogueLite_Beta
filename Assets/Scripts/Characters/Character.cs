@@ -302,7 +302,7 @@ public class Character : MonoBehaviour
                 GameOver();
             else
             {
-                if(name == "Boss") GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd("Win");
+                if(name == "Boss") GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd(true);
                 transform.parent.parent.GetComponent<RoomActive>().CheckCount(gameObject);
             }
         }
@@ -349,7 +349,7 @@ public class Character : MonoBehaviour
             return;
         }
 
-        GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd("Lose");
+        GameObject.Find("EndMenu").GetComponent<EndScene>().GameEnd(false);
         Debug.Log("Player ded");
     }
 
