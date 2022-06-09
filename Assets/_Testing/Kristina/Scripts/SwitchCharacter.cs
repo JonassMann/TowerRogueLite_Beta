@@ -12,7 +12,7 @@ public class SwitchCharacter : MonoBehaviour
 
     public GameObject[] playerPrefabs;
 
-    public GameObject canvas;
+    public GameObject canvasCharacter;
 
     private void Awake()
     {
@@ -27,20 +27,20 @@ public class SwitchCharacter : MonoBehaviour
         Destroy(currentPlayerObject);
         currentPlayerObject = Instantiate(playerPrefabs[index], lastCheckPointPos, Quaternion.identity);
 
-        canvas.SetActive(false);
+        canvasCharacter.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
         {
-            canvas.SetActive(true);
+            canvasCharacter.SetActive(true);
         }
 
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        canvas.SetActive(false);
+        canvasCharacter.SetActive(false);
     }
 }
 

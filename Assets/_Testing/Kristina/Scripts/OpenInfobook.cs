@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenInfobook : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject canvasBook;
        
 
     
@@ -12,7 +12,7 @@ public class OpenInfobook : MonoBehaviour
         {
             if (!other.CompareTag("Player")) return;
             {
-                canvas.SetActive(true);
+            canvasBook.SetActive(true);
             }
 
         }
@@ -21,7 +21,7 @@ public class OpenInfobook : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         {
-            canvas.SetActive(false);
+            canvasBook.SetActive(false);
         }
     }
 }
