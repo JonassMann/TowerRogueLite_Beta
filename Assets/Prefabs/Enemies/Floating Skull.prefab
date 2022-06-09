@@ -184,7 +184,6 @@ GameObject:
   - component: {fileID: 5340273316142240484}
   - component: {fileID: 8847304326487296125}
   - component: {fileID: 8144322532770119409}
-  - component: {fileID: 2952399374533913684}
   - component: {fileID: 8104394495683846226}
   - component: {fileID: 4249297057198280047}
   - component: {fileID: -1623689978606362259}
@@ -322,20 +321,6 @@ MonoBehaviour:
   hitSound: {fileID: -1623689978606362259}
   deathSound: {fileID: 8355005114466571592}
   itemCollect: {fileID: 0}
---- !u!114 &2952399374533913684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5340273316142240485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7149fdf8c722e6469868d30995f4592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops: []
-  currentTarot: {fileID: 0}
 --- !u!50 &8104394495683846226
 Rigidbody2D:
   serializedVersion: 4
