@@ -16,13 +16,13 @@ MonoBehaviour:
   - key: ProjectileCount
     value: 3
   - key: ProjectileSpeed
-    value: 7
+    value: 3
   - key: ProjectileDuration
     value: 4
   - key: WeaponCooldown
     value: 4
   - key: ProjectileSpread
-    value: 20
+    value: 30
   - key: Damage
     value: 1
   - key: WeaponOffset
