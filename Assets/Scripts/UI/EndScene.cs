@@ -14,11 +14,12 @@ public class EndScene : MonoBehaviour
     public void GameEnd(string endText)
     {
         text.text = endText;
+        setPaused(true);
     }
 
     public void exit()
     {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene(0);
     }
 
     private void setPaused(bool paused)
