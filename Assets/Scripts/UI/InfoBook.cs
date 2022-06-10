@@ -5,10 +5,10 @@ using TMPro;
 
 public class InfoBook : MonoBehaviour
 {
-    public TMP_Text text;
+    public TMP_Text enemyText;
 
     public void SetText(string newText)
     {
-        text.text = newText;
+        enemyText.text = newText;
     }
 }

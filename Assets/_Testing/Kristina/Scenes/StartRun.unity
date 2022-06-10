@@ -130,10 +130,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 688419115, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fa9d84e06f8f388409e8631eb817b556, type: 2}
+    - target: {fileID: 688419115, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 845266499, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fa9d84e06f8f388409e8631eb817b556, type: 2}
+    - target: {fileID: 845266499, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 853542052, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 941215167, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_fontSize
+      value: 16.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 941215167, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fa9d84e06f8f388409e8631eb817b556, type: 2}
+    - target: {fileID: 941215167, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8493005314163528009, guid: fa9d84e06f8f388409e8631eb817b556, type: 2}
     - target: {fileID: 1144156492, guid: a76c302b59e65e142a7c2767230181f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -963,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7322403878401851284, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: roomCount
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7322403878401851285, guid: 3eaa21c2f7a803b46a8e0dbddce7f596, type: 3}
       propertyPath: m_RootOrder
